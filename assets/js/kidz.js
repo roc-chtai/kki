@@ -40,22 +40,6 @@
     $(window).trigger('scroll');
   });
 
-  /* ======== ALL DROPDOWN ON HOVER======== */
-  if ($(window).width() > 991) {
-    $('.navbar-expand-lg .navbar-nav .dropdown').hover(function () {
-      $(this).addClass('').find('.dropdown-menu').addClass('show');
-    }, function () {
-      $(this).find('.dropdown-menu').removeClass('show');
-    });
-  }
-
-  if ($(window).width() > 767) {
-    $('.navbar-expand-md .navbar-nav .dropdown').hover(function () {
-      $(this).addClass('').find('.dropdown-menu').addClass('show');
-    }, function () {
-      $(this).find('.dropdown-menu').removeClass('show');
-    });
-  }
 
   /*======== RS-SLIDER ========*/
   var rev_slider_1 = $('#rev_slider_1');
