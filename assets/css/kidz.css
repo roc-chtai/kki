@@ -14687,7 +14687,7 @@ a {
 }
 .dropdown-sm .dropdown-menu .dropdown-item {
   font-size: 0.75rem;
-  padding: 6px 12px;
+  padding: 6px 120px;
   text-transform: capitalize;
   color: #6c757d;
   transition: all 0.3s ease-in-out;
@@ -14813,14 +14813,14 @@ a {
 @media (min-width: 768px) {
   .navbar-nav .dropdown .nav-link span {
     display: block;
-    width: 85px;
+    width: 80px;
     border-right: 2px solid;
     padding: 0 0.75rem;
   }
 }
 @media (min-width: 992px) {
   .navbar-nav .dropdown .nav-link span {
-    width: 110px;
+    width: 100px;
     padding: 0;
   }
 }
@@ -14933,6 +14933,24 @@ a {
   opacity: 1;
   z-index: 1000;
 }
+
+@media (max-width: 991px) {
+  .navbar .dropdown-menu,
+  .navbar .sub-menu {
+    position: static;
+    float: none;
+    width: 100%;
+    min-width: 0;
+    box-shadow: none;
+    margin: 0;
+  }
+  .dropdown-submenu > .sub-menu {
+    left: 0;
+    top: 0;
+    margin-top: 0;
+  }
+}
+
 .navbar-nav .dropdown .dropdown-menu i {
   display: none;
 }
@@ -17437,7 +17455,7 @@ input.focus {
   -khtml-opacity: 0;
   opacity: 0;
   transition: all 0.3s ease-in-out;
-  z-index: 1005;
+  z-index: 999;
   display: block;
 }
 
@@ -18713,5 +18731,15 @@ html[dir=rtl] .cart-dropdown .dropdown-menu-end {
     right: 0px !important;
     transform: translate3d(0px, 30px, 0px) !important;
   }
+}
+
+/* 下拉選單-手機 */
+.dropdown-menu,
+.sub-menu {
+  display: none;
+}
+.dropdown-menu.show,
+.sub-menu.show {
+  display: block;
 }
 /*# sourceMappingURL=kidz.css.map */
