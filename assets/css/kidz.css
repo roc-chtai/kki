@@ -17035,8 +17035,14 @@ button:focus,
 #member-float {
   position: fixed;
   right: 20px;
-  bottom: 75px;
+  bottom: 25px;
   transition: bottom 0.16s ease;
+}
+/* 手機模式：瞬移（沒有transition） */
+@media (max-width: 767px) {
+  #member-float {
+    transition: none !important;
+  }
 }
 
 .icon-header {
@@ -18743,7 +18749,7 @@ html[dir=rtl] .cart-dropdown .dropdown-menu-end {
   }
 }
 
-/* 多層巢狀下拉選單手機 */
+/* 補強多層巢狀下拉選單手機展開顯示 */
 .dropdown-menu,
 .sub-menu {
   display: none;
@@ -18751,4 +18757,12 @@ html[dir=rtl] .cart-dropdown .dropdown-menu-end {
 .dropdown-menu.show,
 .sub-menu.show {
   display: block;
+}
+
+@media (max-width: 991px) {
+  .dropdown-submenu > a > .fa-chevron-right {
+    margin-left: 7px; 
+    font-size: 0.7em;
+    display: inline-block !important;
+  }
 }
