@@ -736,7 +736,7 @@ function enableDropdownEvents() {
   }
 }
 
-// resize 時重掛事件並收回所有 show
+// resize 收回
 $(window).on('resize', function(){
   enableDropdownEvents();
   $('.dropdown-menu.show, .dropdown.show, .sub-menu.show, .dropdown-submenu.show').removeClass('show');
