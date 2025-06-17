@@ -40,7 +40,6 @@
     $(window).trigger('scroll');
   });
 
-
   /*======== RS-SLIDER ========*/
   var rev_slider_1 = $('#rev_slider_1');
   if (rev_slider_1.length !== 0) {
@@ -657,5 +656,75 @@ window.addEventListener('scroll', iconOnScroll);
   new WOW().init();
 
   /*======== Google Analytics  ========*/
+
+function isTouchDevice() {
+  return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || window.matchMedia('(pointer: coarse)').matches);
+}
+
+// 支援手機/平板巢狀下拉（三層，寬度 <= 991）
+$(document).on('click', '.navbar-nav .dropdown > a', function(e) {
+  if(window.innerWidth <= 991 || isTouchDevice()) {
+    var $parent = $(this).parent();
+    var $menu = $parent.find('> .dropdown-menu');
+    if($menu.length) {
+      e.preventDefault();
+      e.stopPropagation();
+      $parent.siblings('.dropdown.show').removeClass('show')
+        .find('.dropdown-menu.show').removeClass('show');
+      $menu.toggleClass('show');
+      $parent.toggleClass('show');
+    }
+  }
+});
+
+$(document).on('click', '.dropdown-submenu > a', function(e) {
+  if(window.innerWidth <= 991 || isTouchDevice()) {
+    var $parent = $(this).parent();
+    var $menu = $parent.find('> .sub-menu');
+    if($menu.length) {
+      e.preventDefault();
+      e.stopPropagation();
+      $parent.siblings('.dropdown-submenu.show').removeClass('show')
+        .find('.sub-menu.show').removeClass('show');
+      $menu.toggleClass('show');
+      $parent.toggleClass('show');
+    }
+  }
+});
+
+// 桌機 hover 展開下拉選單（巢狀也支援），非觸控才啟用
+function enableDesktopDropdownHover() {
+  if(window.innerWidth > 991 && !isTouchDevice()) {
+    $('.navbar-nav .dropdown').off('mouseenter mouseleave');
+    $('.navbar-nav .dropdown').hover(
+      function() {
+        $(this).addClass('show');
+        $(this).find('> .dropdown-menu').addClass('show');
+      },
+      function() {
+        $(this).removeClass('show');
+        $(this).find('> .dropdown-menu').removeClass('show');
+      }
+    );
+    $('.dropdown-submenu').off('mouseenter mouseleave');
+    $('.dropdown-submenu').hover(
+      function() {
+        $(this).addClass('show');
+        $(this).find('> .sub-menu').addClass('show');
+      },
+      function() {
+        $(this).removeClass('show');
+        $(this).find('> .sub-menu').removeClass('show');
+      }
+    );
+  } else {
+    // 若為觸控，移除 hover
+    $('.navbar-nav .dropdown').off('mouseenter mouseleave');
+    $('.dropdown-submenu').off('mouseenter mouseleave');
+  }
+}
+
+$(window).on('resize', enableDesktopDropdownHover);
+$(document).ready(enableDesktopDropdownHover);
 
 })(jQuery);
