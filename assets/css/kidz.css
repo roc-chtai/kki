@@ -781,7 +781,7 @@ progress {
 
 .row {
   --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
+  /* --bs-gutter-y: 0; */
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
@@ -14885,7 +14885,7 @@ a {
     margin-left: 0.18rem;
     padding: 0.3125rem;
     border-radius: 0.25rem;
-    border-left: 4px solid;
+    border-left: 4px solid #ad945a;
     box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.175);
   }
 }
@@ -14906,7 +14906,7 @@ a {
   top: 50%;
   transform: translateY(-50%);
   width: 3px;
-  background-color: #e7e7e7;
+  background-color: #dec07b8a;
   content: "";
 }
 @media (min-width: 768px) {
@@ -14920,7 +14920,7 @@ a {
   .navbar-nav .dropdown .dropdown-menu .sub-menu:after {
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
-    border-right: 7px solid #000;
+    border-right: 7px solid #ad945a;
     top: 20px;
     margin-top: -0.625rem;
     content: "";
@@ -15520,8 +15520,7 @@ a {
     font-family: "Dosis", sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
-  padding-left: 0.5rem;
-
+    padding-left: 0.5rem;
   }
 }
 .dropdown-menu.row.show > .col-12 > .list-unstyled > li:last-child{
@@ -15536,16 +15535,28 @@ a {
   padding-left: 0.1rem;
   }
 }
-.dropdown-menu.row.show .list-unstyled:before {
+.nav-item.bg-primary .dropdown-menu.row.show .list-unstyled:before {
  position: absolute;
-  left: 7px;
-  top: 40px;
-  bottom: 0;
-  width: 3px;
-  background-color: #dedede;
-  content: "";
-  border-radius: 6px;
-  z-index: 0;
+ left: 7px;
+ top: 40px;
+ bottom: 0;
+ width: 3px;
+ background-color: #ad945a8a;
+ content: "";
+ border-radius: 6px;
+ z-index: 0;
+}
+
+.nav-item.bg-success .dropdown-menu.row.show .list-unstyled:before {
+ position: absolute;
+ left: 7px;
+ top: 40px;
+ bottom: 0;
+ width: 3px;
+ background-color: #657a3285;
+ content: "";
+ border-radius: 6px;
+ z-index: 0;
 }
 @media (min-width: 768px) {
   .dropdown-menu.row.show .list-unstyled:before {
@@ -15691,9 +15702,10 @@ a {
   border-right-color: #b5d56a;
 }
 .nav-item.bg-success .dropdown-menu li:first-child {
-    color: #657a32;
+    color: #657a32; 
 }
-.nav-item.bg-primary .dropdown-menu  {
+
+.nav-item.bg-primary .dropdown-menu .list-unstyled  li:first-child {
     color: #ad945a;
 }
 
@@ -18761,7 +18773,7 @@ html[dir=rtl] .cart-dropdown .dropdown-menu-end {
 
 @media (max-width: 991px) {
   .dropdown-submenu > a > .fa-chevron-right {
-    margin-left: 7px; 
+    margin-left: 7px;
     font-size: 0.7em;
     display: inline-block !important;
   }
