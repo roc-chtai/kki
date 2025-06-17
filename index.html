@@ -6,13 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tittle</title>
+  <meta name="description" content="大東海 提供最完整的考試資訊、線上課程與輔導服務">
+  <meta property="og:description" content="大東海 提供最完整的考試資訊、線上課程與輔導服務">
+
 
   <!-- Plugins css Style -->
   <link href='assets/plugins/fontawesome-5.15.2/css/all.min.css' rel='stylesheet'>
   <link href='assets/plugins/animate/animate.css' rel='stylesheet'>
 
-
+  <link href='assets/plugins/fancybox/jquery.fancybox.min.css' rel='stylesheet'>
+  <link href='assets/plugins/isotope/isotope.min.css' rel='stylesheet'>
   
+  
+  <link href='assets/plugins/owl-carousel/owl.carousel.min.css' rel='stylesheet' media='screen'>
+  <link href='assets/plugins/owl-carousel/owl.theme.default.min.css' rel='stylesheet' media='screen'>
+
+<style>/* 預防寬度出事 */
+html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+</style>
+
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,600,700|Open+Sans:300,400,600,700" rel="stylesheet">
@@ -23,7 +40,14 @@
   <!-- Favicon -->
   <link href="#" rel="shortcut icon">
 
- </head>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
 
 <body id="body" class="up-scroll">
   <!-- ====================================
@@ -48,13 +72,13 @@
   <header class="header">
 
     <!-- Navbar -->
-<nav class="navbar navbar-expand-md navbar-scrollUp navbar-sticky navbar-white">
-      <div class="container">
-        <a class="navbar-brand" href="https://donhi.com.tw">
-          <img class="d-inline-block" src="https://donhi.com.tw/themes/donhi2025/assets/img/logo_donhi.png" alt="大東海官網">
+<nav class="navbar navbar-expand-md navbar-scrollUp navbar-sticky navbar-white" aria-label="主導覽列">
+      <div class="container"> 
+        <a class="navbar-brand" href="https://donhi.com.tw" aria-label="回大東海官網首頁">
+           <img class="d-inline-block" src="https://donhi.com.tw/themes/donhi2025/assets/img/logo_donhi.png" alt="大東海Logo" />
         </a>
 
-        <button class="navbar-toggler py-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler py-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="展開主選單">
           <i class="fa fa-bars"></i>
         </button>
 
@@ -62,14 +86,15 @@
           <ul class="navbar-nav ms-lg-auto">
             <li class="nav-item dropdown mega-dropdown  bg-primary">
 
-              <a class="nav-link dropdown-toggle " href="javascript:void(0)" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle " href="javascript:void(0)" aria-haspopup="true" aria-expanded="false">
                 <i class="far fa-folder nav-icon" aria-hidden="true"></i>
-                <span>考試資訊</span>
+                <span>最新考情</span>
               </a>
               <div class="dropdown-menu row">
 <div class="col-12 col-md-2">
-  <ul class="list-unstyled">
-    <li>公職考試</li>
+  <ul class="list-unstyled" aria-label="最新考情" >
+    <li href="#" >公職考試</li>
+    
     <li class="dropdown-submenu">
       <a class="" href="#">公務人員考試<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
       <ul class="sub-menu">
@@ -79,12 +104,61 @@
         <li><a class="" href="#">地方特考</a></li>
       </ul>
     </li>
-    <li><a class="" href="#">警消·海巡·移名<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-    <li><a class="" href="#">司法·調查·國安<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-    <li><a class="" href="#">關務·外交·國際<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-    <li><a class="" href="#">原住民·身心特考<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-    <li><a class="" href="#">軍轉公<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-    <li><a class="" href="#">升等升資考<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+    
+    <li class="dropdown-submenu">
+     <a class="" href="#">警消·海巡·移名<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+      <ul class="sub-menu">
+        <li><a class="" href="#"></a></li>
+        <li><a class="" href="#"></a></li>
+        <li><a class="" href="#"></a></li>
+      </ul>
+    </li>
+    
+    <li class="dropdown-submenu">
+      <a class="" href="#">司法·調查·國安<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+      <ul class="sub-menu">
+        <li><a class="" href="#"></a></li>
+        <li><a class="" href="#"></a></li>
+        <li><a class="" href="#"></a></li>
+      </ul>
+    </li>
+    
+    <li class="dropdown-submenu">
+      <a class="" href="#">關務·外交·國際<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+      <ul class="sub-menu">
+        <li><a class="" href="#"></a></li>
+        <li><a class="" href="#"></a></li>
+        <li><a class="" href="#"></a></li>
+      </ul>
+    </li>
+    
+    <li class="dropdown-submenu">
+      <a class="" href="#">原住民·身心特考<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+      <ul class="sub-menu">
+        <li><a class="" href="#"></a></li>
+        <li><a class="" href="#"></a></li>
+        <li><a class="" href="#"></a></li>
+      </ul>
+    </li>
+    
+    <li class="dropdown-submenu">
+      <a class="" href="#">軍轉公<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+      <ul class="sub-menu">
+        <li><a class="" href="#"></a></li>
+        <li><a class="" href="#"></a></li>
+        <li><a class="" href="#"></a></li>
+      </ul>
+    </li>
+    
+    <li class="dropdown-submenu">
+      <a class="" href="#">升等升資考<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+      <ul class="sub-menu">
+        <li><a class="" href="#"></a></li>
+        <li><a class="" href="#"></a></li>
+        <li><a class="" href="#"></a></li>
+      </ul>
+    </li>
+    
   </ul>
 </div>
                 <div class="col-12 col-md-2">
@@ -150,7 +224,7 @@
             </li>
 
             <li class="nav-item dropdown bg-danger">
-              <a class="nav-link dropdown-toggle " href="javascript:void(0)" role="button" data-bs-toggle="dropdown">
+              <a class="nav-link dropdown-toggle " href="javascript:void(0)" role="button"  >
                 <i class="fas fa-list-ul nav-icon" aria-hidden="true"></i>
                 <span>成功之路</span>
               </a>
@@ -165,7 +239,7 @@
             </li>
 
             <li class="nav-item dropdown mega-dropdown bg-success">
-              <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle " href="#" role="button"   aria-haspopup="true" aria-expanded="false">
                 <i class="fab fa-youtube nav-icon" aria-hidden="true"></i>
                 <span>影音資訊</span>
               </a>
@@ -202,7 +276,7 @@
             </li>
 
             <li class="nav-item dropdown bg-info">
-                            <a class="nav-link dropdown-toggle " href="javascript:void(0)" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle " href="javascript:void(0)"   aria-haspopup="true" aria-expanded="false">
 
                 <i class="fas fa-globe nav-icon" aria-hidden="true"></i>
                 <span>全國連鎖</span>
@@ -230,7 +304,7 @@
             </li>
 
             <li class="nav-item dropdown bg-purple">
-              <a class="nav-link dropdown-toggle " href="javascript:void(0)" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle " href="javascript:void(0)"   aria-haspopup="true" aria-expanded="false">
                 <i class="far fa-file-alt nav-icon" aria-hidden="true"></i>
                 <span>其他資訊</span>
               </a>
@@ -362,97 +436,37 @@
 
 <!--scrolling-->
 <div class="">
-  <a href="#pageTop" class="back-to-top" id="back-to-top" style="opacity: 1;">
+  <a href="#pageTop" class="back-to-top" id="back-to-top" style="opacity: 1;" aria-label="回頂端">
     <i class="fas fa-arrow-up" aria-hidden="true"></i>
   </a>
 </div>
 
 <!-- 會員按鈕 -->
     <div class="">
-<li class="icon-header" id="member-float"
-    data-bs-toggle="modal" data-bs-target="#modal-login">
-  <i class="fas fa-user" aria-hidden="true"></i>
+<li class="icon-header" id="member-float" data-bs-toggle="modal" data-bs-target="#modal-login" aria-label="會員登入">
+    <i class="fas fa-user" aria-hidden="true"></i>
 </li>
     </div>
 
 <!-- Javascript -->
-  <script src='assets/plugins/jquery/jquery.min.js'></script>
+<script src='assets/plugins/jquery/jquery.min.js'></script>
 <script src='assets/plugins/bootstrap/js/bootstrap.bundle.min.js'></script>
-  <script>
-    (function($){
-      function isMobile() {
-        return window.innerWidth <= 991;
-      }
-      function enableDesktopDropdown() {
-        $('.navbar-nav .dropdown').off('mouseenter mouseleave click');
-        $('.dropdown-submenu').off('mouseenter mouseleave click');
-        $('.navbar-nav .dropdown').hover(
-          function () {
-            $(this).addClass('show');
-            $(this).find('> .dropdown-menu').addClass('show');
-          },
-          function () {
-            $(this).removeClass('show');
-            $(this).find('> .dropdown-menu').removeClass('show');
-          }
-        );
-        $('.dropdown-submenu').hover(
-          function () {
-            $(this).addClass('show');
-            $(this).find('> .sub-menu').addClass('show');
-          },
-          function () {
-            $(this).removeClass('show');
-            $(this).find('> .sub-menu').removeClass('show');
-          }
-        );
-      }
-      function enableMobileDropdown() {
-        $('.navbar-nav .dropdown, .dropdown-submenu').off('mouseenter mouseleave');
-        $('.navbar-nav .dropdown > a').off('click').on('click', function(e) {
-          var parentLi = $(this).parent();
-          var menu = parentLi.find('> .dropdown-menu');
-          if(menu.length){
-            e.preventDefault();
-            e.stopPropagation();
-            menu.toggleClass('show');
-            parentLi.toggleClass('show');
-            parentLi.siblings('.show').removeClass('show').find('.show').removeClass('show');
-          }
-        });
-        $('.dropdown-submenu > a').off('click').on('click', function(e) {
-          var parentLi = $(this).parent();
-          var menu = parentLi.find('> .sub-menu');
-          if(menu.length){
-            e.preventDefault();
-            e.stopPropagation();
-            menu.toggleClass('show');
-            parentLi.toggleClass('show');
-            parentLi.siblings('.show').removeClass('show').find('.show').removeClass('show');
-          }
-        });
-      }
-      function initDropdownBehavior() {
-        if (isMobile()) {
-          enableMobileDropdown();
-          $(document).off('click.navclose').on('click.navclose', function(e){
-            if ($(e.target).closest('.navbar-nav .dropdown, .dropdown-menu, .sub-menu').length) {
-              return;
-            }
-            $('.dropdown-menu.show, .sub-menu.show').removeClass('show');
-            $('.dropdown.show, .dropdown-submenu.show').removeClass('show');
-          });
-        } else {
-          enableDesktopDropdown();
-          $(document).off('click.navclose');
-        }
-      }
-      $(document).ready(initDropdownBehavior);
-      $(window).on('resize', function(){
-        setTimeout(initDropdownBehavior, 150);
-      });
-    })(jQuery);
-  </script>
+
+<script src='assets/plugins/fancybox/jquery.fancybox.min.js'></script>
+<script src='assets/plugins/isotope/isotope.min.js'></script>
+<script src='assets/plugins/images-loaded/js/imagesloaded.pkgd.min.js'></script>
+
+<script src='assets/plugins/lazyestload/lazyestload.js'></script>
+
+
+<script src='assets/plugins/owl-carousel/owl.carousel.min.js'></script>
+<script src='assets/plugins/revolution/js/jquery.themepunch.tools.min.js'></script>
+<script src='assets/plugins/revolution/js/jquery.themepunch.revolution.min.js'></script>
+
+<!-- Load revolution slider only on Local File Systems. The following part can be removed on Server -->
+<!-- 
+<script src='assets/plugins/revolution/js/extensions/revolution.extension.navigation.min.js'></script> 
+-->
 
 <script src='assets/plugins/wow/wow.min.js'></script>
 
