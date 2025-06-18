@@ -15002,9 +15002,7 @@ a {
   }
 }
 
-.navbar-nav .nav-item.dropdown:last-child .dropdown-toggle:after {
-  content: "";
-}
+
 
 @media (min-width: 768px) {
   .navbar-expand-md .navbar-nav .nav-link {
@@ -15539,7 +15537,7 @@ a {
  position: absolute;
  left: 7px;
  top: 40px;
- bottom: 0;
+ bottom: 23px;
  width: 3px;
  background-color: #ad945a8a;
  content: "";
