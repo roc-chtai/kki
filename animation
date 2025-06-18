@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>AI協會 六邊形持續慢慢旋轉</title>
+  <style>
+    body { background: #232654; height: 100vh; margin: 0; display: flex; justify-content: center; align-items: center;}
+    .hex-prism-container { perspective: 1400px; width: 420px; height: 380px;}
+    .hex-prism {
+      width: 300px; height: 300px; position: relative;
+      transform-style: preserve-3d;
+      animation: spin 32s linear infinite; /* 轉一圈32秒，可以再調更慢 */
+    }
+    @keyframes spin {
+      from { transform: rotateY(0deg);}
+      to   { transform: rotateY(-360deg);}
+    }
+    .hex-face {
+      position: absolute; width: 300px; height: 300px;
+      left: 0; top: 0;
+      background: #fff;
+      box-shadow: 0 8px 32px #0003;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; color: #232654;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .hex-face:hover { background: #ffb300; color: #fff;}
+    .hex-face:nth-child(1) { transform: rotateY(0deg) translateZ(260px);}
+    .hex-face:nth-child(2) { transform: rotateY(60deg) translateZ(260px);}
+    .hex-face:nth-child(3) { transform: rotateY(120deg) translateZ(260px);}
+    .hex-face:nth-child(4) { transform: rotateY(180deg) translateZ(260px);}
+    .hex-face:nth-child(5) { transform: rotateY(240deg) translateZ(260px);}
+    .hex-face:nth-child(6) { transform: rotateY(300deg) translateZ(260px);}
+  </style>
+</head>
+<body>
+  <div class="hex-prism-container">
+    <div class="hex-prism" id="hexPrism">
+      <a class="hex-face" href="#1">會員專區</a>
+      <a class="hex-face" href="#2">活動快訊</a>
+      <a class="hex-face" href="#3">資源下載</a>
+      <a class="hex-face" href="#4">協會簡介</a>
+      <a class="hex-face" href="#5">聯絡我們</a>
+      <a class="hex-face" href="#6">AI專案</a>
+    </div>
+  </div>
+</body>
+</html>
