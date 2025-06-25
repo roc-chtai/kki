@@ -18783,6 +18783,7 @@ html[dir=rtl] .cart-dropdown .dropdown-menu-end {
   justify-content: space-between;
   margin: 10px auto;
   width:95%;
+  max-width:1200px;
 }
 @media screen and (max-width: 575px) {
   .main_link_wrap {
