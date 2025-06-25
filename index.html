@@ -21,11 +21,67 @@
   <link href='assets/plugins/owl-carousel/owl.carousel.min.css' rel='stylesheet' media='screen'>
   <link href='assets/plugins/owl-carousel/owl.theme.default.min.css' rel='stylesheet' media='screen'>
 
-<style>/* 預防寬度出事 */
+<style>
+  /* 預防寬度出事 */
 html, body {
   width: 100% !important;
   max-width: 100% !important;
   overflow-x: hidden !important;
+}
+
+  /* 首頁輪播下方的按鈕 */
+.main_link_wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+@media screen and (max-width: 575px) {
+  .main_link_wrap {
+    flex-wrap: wrap;
+    margin-top: 0px;
+  }
+}
+.main_link_item {
+  width: calc((100% - 100px) / 6);
+  display: block;
+  border-radius: 3px;
+  background-color: #e57d74;
+  text-align: center;
+  color: #fff;
+  transition: all 0.5s ease;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+.main_link_item:hover {
+  background-color: #ec938c;
+  color: #fff;
+}
+@media screen and (max-width: 1200px) {
+  .main_link_item {
+    font-size: 20px;
+    padding: 15px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .main_link_item {
+    /* font-size: 18px; */
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main_link_item {
+    width: calc((100% - 60px) / 6);
+    padding: 8px 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  .main_link_item {
+    width: calc((100% - 30px) / 3);
+    margin-top: 10px;
+    color: #fff;
+    background-color: #e57d74;
+  }
 }
 
 </style>
