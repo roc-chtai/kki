@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tittle</title>
+  <meta name="description" content="大東海 提供最完整的考試資訊、線上課程與輔導服務">
+  <meta property="og:description" content="大東海 提供最完整的考試資訊、線上課程與輔導服務">
+
 
   <!-- Plugins css Style -->
   <link href='assets/plugins/fontawesome-5.15.2/css/all.min.css' rel='stylesheet'>
@@ -17,6 +20,16 @@
   
   <link href='assets/plugins/owl-carousel/owl.carousel.min.css' rel='stylesheet' media='screen'>
   <link href='assets/plugins/owl-carousel/owl.theme.default.min.css' rel='stylesheet' media='screen'>
+
+<style>/* 預防寬度出事 */
+html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+</style>
+
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,600,700|Open+Sans:300,400,600,700" rel="stylesheet">
@@ -55,96 +68,253 @@
   ——— HEADER
   ===================================== -->
 <div class="bg-danger top-bar" id="pageTop">   </div> 
-  
-  <header class="header">
+
+<header class="header" style="height: auto;">
 
     <!-- Navbar -->
-<nav class="navbar navbar-expand-md navbar-scrollUp navbar-sticky navbar-white">
-      <div class="container">
-        <a class="navbar-brand" href="https://donhi.com.tw">
-          <img class="d-inline-block" src="https://donhi.com.tw/themes/donhi2025/assets/img/logo_donhi.png" alt="大東海官網">
+
+  <nav class="navbar navbar-expand-md navbar-white" aria-label="主導覽列" style="opacity: 1;">
+      <div class="container"> 
+        <a class="navbar-brand" href="https://donhi.com.tw" aria-label="回大東海官網首頁">
+           <img class="d-inline-block" src="https://donhi.com.tw/themes/donhi2025/assets/img/logo_donhi.png" alt="大東海Logo">
         </a>
 
-        <button class="navbar-toggler py-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler py-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="true" aria-label="展開主選單">
           <i class="fa fa-bars"></i>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarContent">
+        <div class="navbar-collapse collapse show" id="navbarContent" style="">
           <ul class="navbar-nav ms-lg-auto">
-            <li class="nav-item dropdown mega-dropdown  bg-primary">
+            <li class="nav-item dropdown mega-dropdown bg-primary">
 
-              <a class="nav-link dropdown-toggle " href="javascript:void(0)" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="javascript:void(0)" aria-haspopup="true" aria-expanded="false">
                 <i class="far fa-folder nav-icon" aria-hidden="true"></i>
-                <span>考試資訊</span>
+                <span>最新考情</span>
               </a>
               <div class="dropdown-menu row">
-<div class="col-12 col-md-2">
-  <ul class="list-unstyled">
-    <li>公職考試</li>
-    <li class="dropdown-submenu">
-      <a class="" href="#">公務人員考試<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-      <ul class="sub-menu">
-        <li><a class="" href="#">高考</a></li>
-        <li><a class="" href="#">普考</a></li>
-        <li><a class="" href="#">初等考</a></li>
-        <li><a class="" href="#">地方特考</a></li>
-      </ul>
-    </li>
-    <li><a class="" href="#">警消·海巡·移名<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-    <li><a class="" href="#">司法·調查·國安<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-    <li><a class="" href="#">關務·外交·國際<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-    <li><a class="" href="#">原住民·身心特考<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-    <li><a class="" href="#">軍轉公<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-    <li><a class="" href="#">升等升資考<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+              <div class="col-12 col-md-2">
+                <ul class="list-unstyled" aria-label="最新考情">
+                  <li href="#">公職考試</li>
+                  
+                  <li class="dropdown-submenu">
+                    <a class="" href="#">公務人員考試<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <ul class="sub-menu">
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=14">高考</a></li>
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=14">普考</a></li>
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=46">初等考</a></li>
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=48">地方特考</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li class="dropdown-submenu">
+                   <a class="" href="#">警消·海巡·移民<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <ul class="sub-menu">
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=33">一般警察</a></li>
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=42">警察升等</a></li>
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=63">警專招考</a></li>
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=29">海巡特考</a></li>
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=28">移民行政特考</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li class="dropdown-submenu">
+                    <a class="" href="#">司法·調查·國安<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <ul class="sub-menu">
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=36">司法特考</a></li>
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=21">調查特考</a></li>
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=11">國安特考</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li class="dropdown-submenu">
+                    <a class="" href="#">關務·外交·國際<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <ul class="sub-menu">
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=37">關務特考 </a></li>
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=8">外交特考</a></li>
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=39">國際商務</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li class="dropdown-submenu">
+                    <a class="" href="#">原住民·身心特考<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <ul class="sub-menu">
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=1">原住民特考</a></li>
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=32">身心特考</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li class="dropdown-submenu">
+                    <a class="" href="#">軍轉公<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <ul class="sub-menu">
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=7">退除役特考</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li class="dropdown-submenu">
+                    <a class="" href="#">升等升資考<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <ul class="sub-menu">
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=65">公務升等</a></li>
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=67">關務升等</a></li>
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=42">警察升等</a></li>
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=84">公路升資</a></li>
+                      <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=68">港務升資</a></li>
+                    </ul>
+                  </li>
+    
   </ul>
 </div>
                 <div class="col-12 col-md-2">
                   <ul class="list-unstyled">
                     <li>國營事業</li>
-                    <li><a class="" href="#">台電·台水·台糖·中油<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-                    <li><a class="" href="#">台煙·台港·台船·台鐵<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-                    <li><a class="" href="#">中華電信·中華郵政<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-                    <li><a class="" href="#">北水·林業<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-                    <li><a class="" href="#">中鋼·中龍<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-                    <li><a class="" href="#">捷運<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-                    <li><a class="" href="#">農會·魚會·農田水利<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-                    <li><a class="" href="#">升資考(台鐵·郵局)<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+                    <li class="dropdown-submenu">
+                      <a class="" href="#">台電·台水·台糖·中油<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                      <ul class="sub-menu">
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=27">經濟部國營聯招</a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=31">台電招考</a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=24">台水招考</a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=51">台糖招考</a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=34">中油招考</a></li>
+                      </ul>
+                    </li>
+                                                        
+                    <li class="dropdown-submenu">
+                      <a class="" href="#">台煙·台港·台船·台鐵<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                      <ul class="sub-menu">
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=80">台煙招考</a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=9">台港招考</a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=10">台船招考 </a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=26">台鐵招考</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+                      <a class="" href="#">北水·林業<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                      <ul class="sub-menu">
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=24">北水招考</a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=85">(阿里山)林業鐵路</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+                      <a class="" href="#">中華電信·中華郵政<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                      <ul class="sub-menu">
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=23">中華電信</a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=35">中華郵政</a></li>
+                      </ul>
+                    </li>
+                                       
+                    <li class="dropdown-submenu">
+                      <a class="" href="#">中鋼·中龍<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                      <ul class="sub-menu">
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=38">中鋼招考</a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=57">中龍招考</a></li>
+                      </ul>
+                    </li>
+                    
+                    <li class="dropdown-submenu">
+                      <a class="" href="#">捷運<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                      <ul class="sub-menu">
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=15">台北捷運</a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=18">桃園捷運</a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=17">新北捷運</a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=25">台中捷運</a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=76">高雄捷運</a></li>
+                      </ul>
+                    </li>
+                    
+                    <li class="dropdown-submenu">
+                      <a class="" href="#">農會·漁會·農田水利<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                      <ul class="sub-menu">
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=71">農會</a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=78">漁會</a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=72">農田水利事業</a></li>
+                      </ul>
+                    </li>
+                    
+                    <li class="dropdown-submenu">
+                      <a class="" href="#">升資考(郵局·台鐵)<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                      <ul class="sub-menu">
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=73">郵局升資</a></li>
+                        <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=66">台鐵升資</a></li>
+                      </ul>
+                    </li>
+                    
                   </ul>
                 </div>
                 <div class="col-12 col-md-2">
                   <ul class="list-unstyled">
                     <li>銀行招考</li>
-                    <li><a class="" href="#">台灣銀行集團<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-                    <li><a class="" href="#">土地銀行</a></li>
-                    <li><a class="" href="#">第一銀行</a></li>
-                    <li><a class="" href="#">華南銀行</a></li>
-                    <li><a class="" href="#">彰化銀行</a></li>
-                    <li><a class="" href="#">兆豐銀行</a></li>
-                    <li><a class="" href="#">高雄銀行</a></li>
-                    <li><a class="" href="#">台灣企銀</a></li>
-                    <li><a class="" href="#">合作金庫·農業金庫<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-                    <li><a class="" href="#">國營與特種金融機構<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+                    
+                    <li class="dropdown-submenu">
+                      <a href="#">台灣銀行集團 <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                      <ul class="sub-menu">
+                        <li><a href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=22">台灣銀行</a></li>
+                        <li><a href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=52">台銀人壽</a></li>
+                        <li><a href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=82">台銀證券</a></li>
+                      </ul>
+                    </li> 
+                    
+                    <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=20">土地銀行</a></li>
+                    <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=30">第一銀行</a></li>
+                    <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=16">華南銀行</a></li>
+                    <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=13">彰化銀行</a></li>
+                    <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=53">兆豐銀行</a></li>
+                    <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=69">高雄銀行</a></li>
+                    <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=12">台灣企銀</a></li>
+                    
+                    <li class="dropdown-submenu">
+                      <a href="#">合作金庫·農業金庫 <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                      <ul class="sub-menu">
+                        <li><a href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=19">合作金庫</a></li>
+                        <li><a href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=54">農業金庫</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+                      <a href="#">國營與特種金融機構 <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                      <ul class="sub-menu">
+                        <li><a href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=55">輸出入銀</a></li>
+                        <li><a href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=70">金融聯徵中心</a></li>
+                        <li><a href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=56">中央造幣廠</a></li>
+                      </ul>
+                    </li>
+
                   </ul>
                 </div>
                 <div class="col-12 col-md-2">
                   <ul class="list-unstyled">
                     <li>證照考試</li>
-                    <li><a class="" href="#">記帳士</a></li>
-                    <li><a class="" href="#">地政士</a></li>
-                    <li><a class="" href="#">不動產經紀人</a></li>
-                    <li><a class="" href="#">消防</a></li>
-                    <li><a class="" href="#">導遊·領隊</a></li>
-                    <li><a class="" href="#">社工師</a></li>
-                    <li><a class="" href="#">專技證照</a></li>
+                    <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=58">記帳士</a></li>
+                    <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=77">地政士</a></li>
+                    <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=59">不動產經紀人</a></li>
+                    
+                    <li class="dropdown-submenu">
+                      <a href="#">消防<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                      <ul class="sub-menu">
+                        <li><a href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=61">消防士</a></li>
+                        <li><a href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=60">消防師</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+                      <a href="#">導遊·領隊<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                      <ul class="sub-menu">
+                        <li><a href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=44">導遊人員</a></li>
+                        <li><a href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=60">領隊人員</a></li>
+                      </ul>
+                    </li>            
+     
+                    <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=62">社工師</a></li>
+                    <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=116">專技證照</a></li>
                   </ul>
                 </div>
                 <div class="col-12 col-md-2">
                   <ul class="list-unstyled">
                     <li>教職教師</li>
-                    <li><a class="" href="#">教育行政</a></li>
-                    <li><a class="" href="#">教師甄試</a></li>
-                    <li><a class="" href="#">教師檢定</a></li>
-                    <li><a class="" href="#">教保人員</a></li>
+                    <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=91">教育行政</a></li>
+                    <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=88">教師甄試</a></li>
+                    <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=89">教師檢定</a></li>
+                    <li><a class="" href="https://donhi.com.tw/modules/page/index.php?op=page_cate_show&amp;page_cate_sn=87">教保人員</a></li>
                   </ul>
                 </div>
                 <div class="col-12 col-md-2">
@@ -155,13 +325,35 @@
                   </ul>
                 </div>
               </div>
-
- 
-
             </li>
 
+    <li class="nav-item dropdown bg-purple">
+              <a class="nav-link dropdown-toggle " href="javascript:void(0)" aria-haspopup="true" aria-expanded="false">
+                <i class="far fa-file-alt nav-icon" aria-hidden="true"></i>
+                <span>更多資訊</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item " href="https://donhi.com.tw/modules/myfile/">報名簡章</a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="https://donhi.com.tw/modules/donhi_examinfo/index_pay.php">薪資福利</a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="https://donhi.com.tw/modules/donhi_examinfo/index_dept.php">上班機構</a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="https://donhi.com.tw/modules/donhi_examinfo/index_work.php">工作內容</a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="https://donhi.com.tw/modules/past_exam/">歷屆考題</a>
+                </li>
+              </ul>
+            </li>
+
+            
             <li class="nav-item dropdown bg-danger">
-              <a class="nav-link dropdown-toggle " href="javascript:void(0)" role="button" data-bs-toggle="dropdown">
+              <a class="nav-link dropdown-toggle " href="javascript:void(0)" role="button">
                 <i class="fas fa-list-ul nav-icon" aria-hidden="true"></i>
                 <span>成功之路</span>
               </a>
@@ -175,8 +367,35 @@
               </ul>
             </li>
 
+            <li class="nav-item dropdown bg-info">
+                            <a class="nav-link dropdown-toggle " href="javascript:void(0)" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-globe nav-icon" aria-hidden="true"></i>
+                <span>全國連鎖</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item " href="https://donhi.com.tw/modules/myclass/index.php?area_sn=2">大台北地區</a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="https://donhi.com.tw/modules/myclass/index.php?area_sn=5">基宜花地區</a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="https://donhi.com.tw/modules/myclass/index.php?area_sn=7">桃竹苗地區</a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="https://donhi.com.tw/modules/myclass/index.php?area_sn=3">中彰投地區</a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="https://donhi.com.tw/modules/myclass/index.php?area_sn=4">雲嘉南地區</a>
+                </li>
+                <li>
+                  <a class="dropdown-item " href="https://donhi.com.tw/modules/myclass/index.php?area_sn=8">高屏地區</a>
+                </li>
+              </ul>
+            </li>
+            
             <li class="nav-item dropdown mega-dropdown bg-success">
-              <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle " href="#" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="fab fa-youtube nav-icon" aria-hidden="true"></i>
                 <span>影音資訊</span>
               </a>
@@ -211,71 +430,27 @@
                 </div>
               </div>
             </li>
-
-            <li class="nav-item dropdown bg-info">
-                            <a class="nav-link dropdown-toggle " href="javascript:void(0)" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                <i class="fas fa-globe nav-icon" aria-hidden="true"></i>
-                <span>全國連鎖</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li>
-                  <a class="dropdown-item " href="https://donhi.com.tw/modules/myclass/index.php?area_sn=2">大台北地區</a>
-                </li>
-                <li>
-                  <a class="dropdown-item " href="https://donhi.com.tw/modules/myclass/index.php?area_sn=5">基宜花地區</a>
-                </li>
-                <li>
-                  <a class="dropdown-item " href="https://donhi.com.tw/modules/myclass/index.php?area_sn=7">桃竹苗地區</a>
-                </li>
-                <li>
-                  <a class="dropdown-item " href="https://donhi.com.tw/modules/myclass/index.php?area_sn=3">中彰投地區</a>
-                </li>
-                <li>
-                  <a class="dropdown-item " href="https://donhi.com.tw/modules/myclass/index.php?area_sn=4">雲嘉南地區</a>
-                </li>
-                <li>
-                  <a class="dropdown-item " href="https://donhi.com.tw/modules/myclass/index.php?area_sn=8">高屏地區</a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown bg-purple">
-              <a class="nav-link dropdown-toggle " href="javascript:void(0)" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="far fa-file-alt nav-icon" aria-hidden="true"></i>
-                <span>其他資訊</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end" >
-                <li>
-                  <a class="dropdown-item " href="https://donhi.com.tw/modules/myfile/">報名簡章</a>
-                </li>
-                <li>
-                  <a class="dropdown-item " href="https://donhi.com.tw/modules/donhi_examinfo/index_pay.php">薪資福利</a>
-                </li>
-                <li>
-                  <a class="dropdown-item " href="https://donhi.com.tw/modules/donhi_examinfo/index_dept.php">上班機構</a>
-                </li>
-                <li>
-                  <a class="dropdown-item " href="https://donhi.com.tw/modules/donhi_examinfo/index_work.php">工作內容</a>
-                </li>
-                <li>
-                  <a class="dropdown-item " href="https://donhi.com.tw/modules/past_exam/">歷屆考題</a>
-                </li>
-              </ul>
-            </li>
-
+    
             <li class="nav-item dropdown bg-pink">
-              <a class="nav-link dropdown-toggle " href="https://donhi.com.tw/modules/contact/form.php">
+              <a class="nav-link dropdown-toggle " href="javascript:void(0)" role="button">
                 <i class="fas fa-edit nav-icon" aria-hidden="true"></i>
                 <span>免費諮詢</span>
               </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item " href="https://donhi.com.tw/modules/contact/form.php">填寫表單</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">免費諮詢電話</a>
+                </li>
+              </ul>
             </li>
+
+            
           </ul>
         </div>
       </div>
-    </nav>
-  </header>
-
+    </nav></header>
 
 <div style="height: 2000px;"></div>
 
@@ -373,97 +548,22 @@
 
 <!--scrolling-->
 <div class="">
-  <a href="#pageTop" class="back-to-top" id="back-to-top" style="opacity: 1;">
+  <a href="#pageTop" class="back-to-top" id="back-to-top" style="opacity: 1;" aria-label="回頂端">
     <i class="fas fa-arrow-up" aria-hidden="true"></i>
   </a>
 </div>
 
 <!-- 會員按鈕 -->
     <div class="">
-<li class="icon-header" id="member-float"
-    data-bs-toggle="modal" data-bs-target="#modal-login">
-  <i class="fas fa-user" aria-hidden="true"></i>
+<li class="icon-header" id="member-float" data-bs-toggle="modal" data-bs-target="#modal-login" aria-label="會員登入">
+    <i class="fas fa-user" aria-hidden="true"></i>
 </li>
     </div>
 
 <!-- Javascript -->
 <script src='assets/plugins/jquery/jquery.min.js'></script>
 <script src='assets/plugins/bootstrap/js/bootstrap.bundle.min.js'></script>
-  <script>
-    (function($){
-      function isMobile() {
-        return window.innerWidth <= 991;
-      }
-      function enableDesktopDropdown() {
-        $('.navbar-nav .dropdown').off('mouseenter mouseleave click');
-        $('.dropdown-submenu').off('mouseenter mouseleave click');
-        $('.navbar-nav .dropdown').hover(
-          function () {
-            $(this).addClass('show');
-            $(this).find('> .dropdown-menu').addClass('show');
-          },
-          function () {
-            $(this).removeClass('show');
-            $(this).find('> .dropdown-menu').removeClass('show');
-          }
-        );
-        $('.dropdown-submenu').hover(
-          function () {
-            $(this).addClass('show');
-            $(this).find('> .sub-menu').addClass('show');
-          },
-          function () {
-            $(this).removeClass('show');
-            $(this).find('> .sub-menu').removeClass('show');
-          }
-        );
-      }
-      function enableMobileDropdown() {
-        $('.navbar-nav .dropdown, .dropdown-submenu').off('mouseenter mouseleave');
-        $('.navbar-nav .dropdown > a').off('click').on('click', function(e) {
-          var parentLi = $(this).parent();
-          var menu = parentLi.find('> .dropdown-menu');
-          if(menu.length){
-            e.preventDefault();
-            e.stopPropagation();
-            menu.toggleClass('show');
-            parentLi.toggleClass('show');
-            parentLi.siblings('.show').removeClass('show').find('.show').removeClass('show');
-          }
-        });
-        $('.dropdown-submenu > a').off('click').on('click', function(e) {
-          var parentLi = $(this).parent();
-          var menu = parentLi.find('> .sub-menu');
-          if(menu.length){
-            e.preventDefault();
-            e.stopPropagation();
-            menu.toggleClass('show');
-            parentLi.toggleClass('show');
-            parentLi.siblings('.show').removeClass('show').find('.show').removeClass('show');
-          }
-        });
-      }
-      function initDropdownBehavior() {
-        if (isMobile()) {
-          enableMobileDropdown();
-          $(document).off('click.navclose').on('click.navclose', function(e){
-            if ($(e.target).closest('.navbar-nav .dropdown, .dropdown-menu, .sub-menu').length) {
-              return;
-            }
-            $('.dropdown-menu.show, .sub-menu.show').removeClass('show');
-            $('.dropdown.show, .dropdown-submenu.show').removeClass('show');
-          });
-        } else {
-          enableDesktopDropdown();
-          $(document).off('click.navclose');
-        }
-      }
-      $(document).ready(initDropdownBehavior);
-      $(window).on('resize', function(){
-        setTimeout(initDropdownBehavior, 150);
-      });
-    })(jQuery);
-  </script>
+
 <script src='assets/plugins/fancybox/jquery.fancybox.min.js'></script>
 <script src='assets/plugins/isotope/isotope.min.js'></script>
 <script src='assets/plugins/images-loaded/js/imagesloaded.pkgd.min.js'></script>
