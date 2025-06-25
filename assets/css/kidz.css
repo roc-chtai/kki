@@ -18776,3 +18776,54 @@ html[dir=rtl] .cart-dropdown .dropdown-menu-end {
     display: inline-block !important;
   }
 }
+
+  /* 首頁輪播下方的按鈕 */
+.main_link_wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  width:95%;
+}
+@media screen and (max-width: 575px) {
+  .main_link_wrap {
+    flex-wrap: wrap;
+    margin-top: 0px;
+  }
+}
+.main_link_item {
+  width: calc((100% - 100px) / 6);
+  display: block;
+  border-radius: 3px;
+  text-align: center;
+  color: #fff;
+  transition: all 0.5s ease;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+  .main_link_item {
+    font-size: 20px;
+    padding: 15px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .main_link_item {
+    /* font-size: 18px; */
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main_link_item {
+    width: calc((100% - 60px) / 6);
+    padding: 8px 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  .main_link_item {
+    width: calc((100% - 30px) / 3);
+    margin-top: 10px;
+    color: #fff;
+  }
+}
