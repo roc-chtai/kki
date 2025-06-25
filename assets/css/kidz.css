@@ -18811,7 +18811,7 @@ html[dir=rtl] .cart-dropdown .dropdown-menu-end {
 }
 @media screen and (max-width: 991px) {
   .main_link_item {
-    /* font-size: 18px; */
+    font-size: 18px;
     padding: 10px 0;
   }
 }
