@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>中華AI教育學會</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:700|Montserrat:400,700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== 導覽列 CSS ===== */
+    .tech-navbar {
+      background: rgba(13, 27, 77, 0.8) !important;
+      box-shadow: 0 2px 16px #1eb5e544;
+      backdrop-filter: blur(2px);
+      border-bottom: 1.5px solid #1eb5e566;
+      height: 4rem;             
+      padding-top: 0.12rem;          
+      padding-bottom: 0.12rem;
+      z-index: 2000 !important;
+    }
+    .dropdown-menu {
+      z-index: 2100 !important;
+    }
+    .logo-text {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.8rem, 2.4vw, 2.6rem);
+      font-weight: 1000;
+      color: #5cd0f5 !important;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 30px #1eb5e5AA;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      margin-left:10px;
+    }
+    .navbar-nav .nav-link i {
+      margin-right: 0.2em; 
+      margin-left: 0.8em; 
+    }
+    .navbar-nav .nav-link,
+    .navbar-nav .dropdown-toggle {
+      color: #fff !important;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      text-shadow: 0 2px 12px #1eb5e544;
+      transition: color 0.18s, background 0.21s;
+      border-radius: 7px;
+      font-size: 1.08em;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus,
+    .navbar-nav .nav-link.active,
+    .navbar-nav .dropdown-toggle:hover,
+    .navbar-nav .dropdown-toggle:focus,
+    .navbar-nav .dropdown-toggle.show {
+      color: #fff3c2 !important;
+    }
+    .navbar-nav .nav-link:active {
+      color: #ffe066 !important;
+    }
+    .dropdown-menu {
+      background: rgba(13, 27, 77, 0.8) !important;
+      border-radius: 14px;
+      border: 2px solid #1eb5e5;
+      box-shadow: 0 0 16px 2px #b621fe88, 0 1.5px 0 #1eb5e5aa;
+      min-width: 170px;
+      margin-top: 0.6rem !important;
+      padding: 0.5rem 0.22rem;
+      filter: drop-shadow(0 0 10px #1eb5e5aa);
+      position: absolute !important;
+    }
+    .dropdown-item {
+      color: #fff !important;
+      font-weight: 600;
+      border-radius: 8px;
+      margin: 0rem 0.8rem;
+      transition: background 0.18s, color 0.18s;
+      font-size: 1.04em;
+      letter-spacing: 0.5px;
+    }
+    .dropdown-item:hover,
+    .dropdown-item:focus,
+    .dropdown-item.active,
+    .dropdown-item:active {
+      color: #fff3c2 !important;
+      background: rgba(255,255,255,0) !important;
+    }
+    @media (min-width: 768px) {
+      .navbar-toggler {
+        display: none !important;
+      }
+    }
+    .navbar-toggler {
+      border: none;
+      background: none !important;
+      box-shadow: none !important;
+      padding: 0.19em 0.45em;
+      margin-left: 0.3em;
+      display: flex;
+      align-items: center;
+      height: 1.2em;
+    }
+    .hamburger {
+      width: 1.9em;
+      height: 1.9em;
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 0.23s;
+    }
+    .hamburger-bar {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3.5px;
+      border-radius: 3px;
+      background: #fff;
+      transition: all 0.36s cubic-bezier(0.4,0,0.2,1);
+    }
+    .hamburger-bar:nth-child(1) { top: 0.33em; }
+    .hamburger-bar:nth-child(2) { top: 0.89em; }
+    .hamburger-bar:nth-child(3) { top: 1.45em; }
+    .navbar-toggler.collapsed .hamburger-bar { transform: none; opacity: 1; }
+    .navbar-toggler:not(.collapsed) .hamburger-bar:nth-child(1) { transform: translateY(0.56em) rotate(45deg); }
+    .navbar-toggler:not(.collapsed) .hamburger-bar:nth-child(2) { opacity: 0; }
+    .navbar-toggler:not(.collapsed) .hamburger-bar:nth-child(3) { transform: translateY(-0.56em) rotate(-45deg); }
+    @media (max-width: 767.98px) {
+      .navbar-collapse {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 16px;
+        background: none; 
+      }
+      .dropdown-menu {
+        border: 0px;
+      }
+    }
+    @media (max-width: 991.98px) {
+      .dropdown-menu {
+        background: rgba(13, 27, 77, 0.92) !important;
+        box-shadow: 0 6px 24px #1eb5e544;
+      }
+    }
+    @media (max-width: 767.98px) {
+      .navbar-collapse {
+        position: absolute !important;
+        top: 100%;
+        left: 0; right: 0;
+        z-index: 999;
+        background: rgba(13,27,77,0.97);
+        border-radius: 0 0 18px 18px;
+        max-width: 80%;
+        margin: 0 auto;
+        box-shadow: 0 8px 28px #1eb5e554;
+        padding: 1.2rem 1.2rem 1.1rem 1.2rem;
+      }
+      .navbar {
+        position: relative;
+      }
+    }
+    ul.dropdown-menu > li:not(:last-child)::after {
+      content: "";
+      display: block;
+      height: 2.8px;
+      width: 70%;
+      margin: 0rem 1.5rem ;
+      border-radius: 2px;
+      background: linear-gradient(
+        to right,
+        #53e2ff 0%,
+        #53e2ff99 55%,
+        #53e2ff00 100%
+      );
+      pointer-events: none;
+    }
+    /* ===== 粒子背景+深色背景 ===== */
+    .particle-bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 300px;
+      pointer-events: none;
+      z-index: 1;
+      display: block;
+    }
+    .bg-top-dark {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 300px;
+      background: #101b36;
+      z-index: 0;
+    }
+    @media (max-width: 767.98px) {
+      .particle-bg,
+      .bg-top-dark {
+        height: 200px;
+      }
+    }
+    /* ===== 主內容在上以下 ===== */
+    html, body {
+      margin: 0;
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      width: 100%;
+      overflow-x: hidden;
+      background: #fff; /* 其餘頁面為白色背景 */
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+    }
+    main {
+      flex: 1 0 auto;
+      position: relative;
+      z-index: 2;
+      padding-top: 120px;
+    }
+    .main-slogan {
+      font-size: clamp(1.8rem, 2.2vw, 2.6rem);
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 2px 16px #1eb5e544;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  width: fit-content;
+  max-width: 100%;
+    }
+    .main-slogan span {
+      color: #ce68ff;
+      text-shadow: 0 2px 16px #f2ff826e;
+    }
+
+    .hex-prism-container {
+      perspective: 1600px;
+      width: 420px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    .hex-prism {
+      width: 320px;
+      height: 200px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.08s linear;
+      z-index: 2;
+    }
+    .hex-face {
+      position: absolute;
+      width: 320px;
+      height: 160px;
+      box-shadow: 0 8px 32px #0003;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 18px;
+      padding: 22px 16px;
+      user-select: none;
+      background: linear-gradient(135deg,#1eb5e5 60%,#b621fe 100%);
+      transition: box-shadow 0.18s, filter 0.18s;
+    }
+    .hex-face i {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 2px 8px #fff7);
+    }
+    .hex-face h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.4rem;
+    }
+    .hex-face p {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin: 0;
+    }
+    .main-row {
+      margin-top: 25px;
+    }
+    .hex-face:nth-child(1) { transform: rotateY(0deg) translateZ(282px);}
+    .hex-face:nth-child(2) { transform: rotateY(60deg) translateZ(282px);}
+    .hex-face:nth-child(3) { transform: rotateY(120deg) translateZ(282px);}
+    .hex-face:nth-child(4) { transform: rotateY(180deg) translateZ(282px);}
+    .hex-face:nth-child(5) { transform: rotateY(240deg) translateZ(282px);}
+    .hex-face:nth-child(6) { transform: rotateY(300deg) translateZ(282px);}
+    @media (min-width: 576px) {
+      .container, .container-sm {
+        max-width: 95% !important;
+      }
+    }
+    @media (min-width: 768px) {
+      .container, .container-md, .container-sm {
+        max-width: 90% !important;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .hex-prism-container {
+        margin-right: -150px;
+      }
+    }
+    @media (max-width: 767.98px) {
+      .hex-prism-container {
+        width: 180px !important;
+        height: 90px !important;
+        margin: 20px auto 0 auto !important;
+        padding: 0;
+        z-index: 2;
+      }
+      .hex-prism {
+        width: 180px;
+        height: 90px;
+        z-index: 2;
+      }
+      .hex-face {
+        width: 100% !important;
+        height: 100% !important;
+        padding: 6vw 2vw;
+        border-radius: 12px;
+        font-size: 1rem;
+      }
+      .hex-face i {
+        font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+
+      }
+
+      .hex-face h3 {
+        font-size: 1.5rem;
+	margin-bottom: 0rem;
+      }
+      .hex-face p {
+        font-size: 0.88rem;
+      }
+      .hex-face:nth-child(1) { transform: rotateY(0deg) translateZ(160px);}
+      .hex-face:nth-child(2) { transform: rotateY(60deg) translateZ(160px);}
+      .hex-face:nth-child(3) { transform: rotateY(120deg) translateZ(160px);}
+      .hex-face:nth-child(4) { transform: rotateY(180deg) translateZ(160px);}
+      .hex-face:nth-child(5) { transform: rotateY(240deg) translateZ(160px);}
+      .hex-face:nth-child(6) { transform: rotateY(300deg) translateZ(160px);}
+
+    .main-row {
+      margin-top: -10px;
+    }
+.flex-column {
+    display: none !important;
+  }  
+ .dropdown-menu {
+    position: static !important;
+    float: none;
+    box-shadow: none;
+    border-radius: 10px;
+    width: 100%;
+    margin: 0.5rem 0;
+    background: rgba(13, 27, 77, 0.97) !important;
+    z-index: auto !important;
+  }
+  .dropdown-item {
+    margin: 0.3em 0.5em;
+    border-radius: 8px;
+  }
+}
+  </style>
+</head>
+<body>
+  <!-- ===== 深色背景（與粒子背景同高，粒子在上） ===== -->
+  <div class="bg-top-dark"></div>
+  <!-- ===== 粒子背景 ===== -->
+  <canvas class="particle-bg" id="particle-bg"></canvas>
+  <!-- ===== 導覽列 HTML ===== -->
+  <nav class="navbar navbar-expand-md tech-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand logo-text" href="https://roc-central-ai-edu.org/">中華AI教育學會</a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="https://roc-central-ai-edu.org/"><i class="fa-solid fa-house"></i>首頁</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="promotionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-location-dot"></i>推廣園區
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="promotionDropdown">
+              <li><a class="dropdown-item" href="https://roc-central-ai-edu.org/modules/tadnews/page.php?ncsn=5&nsn=9">應考須知</a></li>
+              <li><a class="dropdown-item" href="https://roc-central-ai-edu.org/modules/tadnews/page.php?ncsn=5&nsn=11">權威教材</a></li>
+              <li><a class="dropdown-item" href="https://roc-central-ai-edu.org/modules/tadnews/page.php?ncsn=5&nsn=12">教學影集</a></li>
+              <li><a class="dropdown-item" href="https://roc-central-ai-edu.org/modules/tadnews/page.php?ncsn=5&nsn=14">報名簡章</a></li>
+              <li><a class="dropdown-item" href="https://roc-central-ai-edu.org/modules/tadnews/page.php?ncsn=5&nsn=13">優惠學費</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="educationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-font-awesome"></i>培育園區
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="educationDropdown">
+              <li><a class="dropdown-item" href="https://roc-central-ai-edu.org/modules/tadnews/page.php?ncsn=7&nsn=15">學會簡介</a></li>
+              <li><a class="dropdown-item" href="https://roc-central-ai-edu.org/modules/tadnews/page.php?ncsn=8&nsn=16">講座活動</a></li>
+              <li><a class="dropdown-item" href="#">師資培訓</a></li>
+              <li><a class="dropdown-item" href="#">著作書籍</a></li>
+              <li><a class="dropdown-item" href="https://roc-central-ai-edu.org/modules/aiVideos/">活動影音</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-comment"></i>最新訊息</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- ===== 主內容 ===== -->
+  <main class="container pt-3">
+    <div class="row main-row align-items-center">
+      <div class="col-md-4 pb-4 d-flex flex-column align-items-start justify-content-center">
+        <div class="main-slogan">
+          推動<span>AI教育</span>，<br>創新未來！
+        </div>
+      </div>
+      <div class="col-md-8 d-flex justify-content-center">
+        <div class="hex-prism-container">
+          <div class="hex-prism" id="hexPrismDesktop">
+            <div class="hex-face" data-href="https://roc-central-ai-edu.org/modules/tadnews/page.php?ncsn=7&nsn=15">
+              <i class="fas fa-robot"></i><h3>學會簡介</h3>
+            </div>
+            <div class="hex-face" data-href="https://roc-central-ai-edu.org/modules/tadnews/page.php?ncsn=8&nsn=16">
+              <i class="fas fa-users"></i><h3>講座活動</h3>
+            </div>
+            <div class="hex-face" data-href="#"><i class="fas fa-chalkboard-teacher"></i><h3>師資培訓</h3></div>
+            <div class="hex-face" data-href="#"><i class="fas fa-book-open"></i><h3>著作書籍</h3></div>
+            <div class="hex-face" data-href="https://roc-central-ai-edu.org/modules/aiVideos/"><i class="fas fa-video"></i><h3>活動影音</h3></div>
+            <div class="hex-face" data-href="https://roc-central-ai-edu.org/modules/tadnews/page.php?ncsn=5"><i class="fas fa-user-graduate"></i><h3>AI規劃師</h3></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- ===== JS ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Prism 六角旋轉動畫
+    function setupPrism(id) {
+      const prism = document.getElementById(id);
+      if (!prism) return;
+      let angle = 0;
+      let autoSpeed = 0.05;
+      let speed = autoSpeed;
+      let dragging = false;
+      let lastX = 0, lastY = 0;
+      let lastTime = 0;
+      let inertia = 0;
+
+      function animate() {
+        if (!dragging) {
+          angle += speed;
+          if (Math.abs(speed - autoSpeed) > 0.001) {
+            speed *= 0.97;
+            if (Math.abs(speed) < autoSpeed) speed = autoSpeed * (speed > 0 ? 1 : -1);
+          } else {
+            speed = autoSpeed;
+          }
+        }
+        prism.style.transform = `rotateY(${angle}deg)`;
+        requestAnimationFrame(animate);
+      }
+      animate();
+
+      // 桌機拖曳
+      prism.addEventListener('mousedown', e => {
+        dragging = true;
+        lastX = e.clientX;
+        lastTime = Date.now();
+        inertia = 0;
+        prism.style.transition = 'none';
+        e.preventDefault();
+      });
+
+      window.addEventListener('mousemove', e => {
+        if (dragging) {
+          let dx = e.clientX - lastX;
+          angle += dx * 0.2;
+          let now = Date.now();
+          inertia = dx / (now - lastTime + 1);
+          lastX = e.clientX;
+          lastTime = now;
+          prism.style.transform = `rotateY(${angle}deg)`;
+        }
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (dragging) {
+          dragging = false;
+          speed = inertia * 2;
+          if (Math.abs(speed) < autoSpeed) speed = autoSpeed * (speed > 0 ? 1 : -1);
+          prism.style.transition = '';
+        }
+      });
+
+      // 手機滑動
+      prism.addEventListener('touchstart', e => {
+        if (e.touches.length === 1) {
+          dragging = true;
+          lastX = e.touches[0].clientX;
+          lastTime = Date.now();
+          inertia = 0;
+          prism.style.transition = 'none';
+        }
+      });
+
+      window.addEventListener('touchmove', e => {
+        if (dragging && e.touches.length === 1) {
+          let dx = e.touches[0].clientX - lastX;
+          angle += dx * 0.25;
+          let now = Date.now();
+          inertia = dx / (now - lastTime + 1);
+          lastX = e.touches[0].clientX;
+          lastTime = now;
+          prism.style.transform = `rotateY(${angle}deg)`;
+        }
+      }, { passive: false });
+
+      window.addEventListener('touchend', () => {
+        if (dragging) {
+          dragging = false;
+          speed = inertia * 2;
+          if (Math.abs(speed) < autoSpeed) speed = autoSpeed * (speed > 0 ? 1 : -1);
+          prism.style.transition = '';
+        }
+      });
+    }
+
+    setupPrism('hexPrismDesktop');
+
+    // 點擊跳轉（含防誤觸拖曳）
+    document.querySelectorAll('.hex-face').forEach(function(face) {
+      let startX = 0, startY = 0, moved = false;
+
+      face.addEventListener('mousedown', function(e) {
+        moved = false;
+        startX = e.clientX;
+        startY = e.clientY;
+      });
+      face.addEventListener('mousemove', function(e) {
+        if (Math.abs(e.clientX - startX) > 8 || Math.abs(e.clientY - startY) > 8) {
+          moved = true;
+        }
+      });
+      face.addEventListener('mouseup', function(e) {
+        if (!moved && face.dataset.href && face.dataset.href !== '#') {
+          window.open(face.dataset.href, "_self");
+        }
+      });
+
+      face.addEventListener('touchstart', function(e) {
+        moved = false;
+        if (e.touches.length === 1) {
+          startX = e.touches[0].clientX;
+          startY = e.touches[0].clientY;
+        }
+      });
+      face.addEventListener('touchmove', function(e) {
+        if (e.touches.length === 1) {
+          let dx = Math.abs(e.touches[0].clientX - startX);
+          let dy = Math.abs(e.touches[0].clientY - startY);
+          if (dx > 8 || dy > 8) moved = true;
+        }
+      });
+      face.addEventListener('touchend', function(e) {
+        if (!moved && face.dataset.href && face.dataset.href !== '#') {
+          window.open(face.dataset.href, "_self");
+        }
+      });
+    });
+
+    // 粒子動畫背景
+    const cvs = document.getElementById('particle-bg');
+    const ctx = cvs.getContext('2d');
+    function resize() {
+      // 只需符合 CSS 設定的高度
+      const cssHeight = parseInt(getComputedStyle(cvs).height);
+      cvs.width = window.innerWidth;
+      cvs.height = cssHeight;
+    }
+    window.addEventListener('resize', resize); resize();
+
+    let particles = [];
+    function initParticles() {
+      particles = [];
+      for(let i=0; i<90; i++) {
+        particles.push({
+          x: Math.random()*cvs.width,
+          y: Math.random()*cvs.height,
+          r: 1.2 + Math.random()*2.8,
+          dx: (Math.random()-0.5)*0.8,
+          dy: (Math.random()-0.5)*0.8,
+          a: 0.28 + Math.random()*0.5
+        });
+      }
+    }
+    initParticles();
+    window.addEventListener('resize', initParticles);
+
+    function draw() {
+      ctx.clearRect(0, 0, cvs.width, cvs.height);
+      for(let i=0; i<particles.length; i++) {
+        for(let j=i+1; j<particles.length; j++) {
+          let dx = particles[i].x - particles[j].x;
+          let dy = particles[i].y - particles[j].y;
+          let d = Math.sqrt(dx*dx + dy*dy);
+          if(d < 120) {
+            ctx.strokeStyle = 'rgba(30,181,229,0.07)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      for(let p of particles) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, 2*Math.PI);
+        ctx.fillStyle = `rgba(182,33,254,${p.a})`;
+        ctx.fill();
+        p.x += p.dx; p.y += p.dy;
+        // 保持在畫布範圍內
+        if(p.x < 0 || p.x > cvs.width) p.dx *= -1;
+        if(p.y < 0 || p.y > cvs.height) p.dy *= -1;
+      }
+      requestAnimationFrame(draw);
+    }
+    draw();
+  </script>
+</body>
+</html>
