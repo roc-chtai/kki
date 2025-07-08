@@ -70,12 +70,23 @@
       .desktop-nav { display: block !important; }
       .mobile-nav { display: none !important; }
     }
+
+.exam_inform_second_item_title a {
+  font-size: clamp(18px, 2.4vw, 24px);
+  color: #ec938c;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.card-header.bg-danger {
+  font-size: clamp(19px, 3vw, 28px);
+}
   </style>
 </head>
 <body>
 <div class="container py-4">
   <h1 class="mb-4 text-danger">公職考試總覽</h1>
-  <div class="row g-3">
+  <div class="row g-6">
     <!-- 左側分類（桌機用按鈕） -->
     <nav class="col-12 col-md-3 mb-4 desktop-nav">
       <div class="list-group sticky-top" id="section-nav">
