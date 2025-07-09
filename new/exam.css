@@ -1,0 +1,66 @@
+  .exam_inform_second_item {
+      padding: 16px 23px 16px 56px;
+      border-bottom: 1px solid #dcdcdc;
+      position: relative;
+      transition: all 0.3s;
+    }
+    .exam_inform_second_item:last-child {
+      border-bottom: none;
+    }
+    .exam_inform_second_item::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #ec938c;
+      left: 23px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .exam_inform_second_item_title a {
+      font-size: 1.2em;
+      color: #9b5e59;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .exam_inform_second_item_title a:hover {
+      color: #b84040;
+    }
+    .card-header.bg-danger {
+      background: var(--bs-danger,#ea7066) !important;
+      color: #fff !important;
+      border-radius: .375rem .375rem 0 0;
+    }
+    /* 讓左側按鈕*/
+    #section-nav .btn { width: 100%; text-align: left; }
+    #section-nav .btn.active, #section-nav .btn:active, #section-nav .btn:focus {
+      background: #ea7066 !important;
+      color: #fff !important;
+      border-color: #ea7066 !important;
+    }
+#section-nav .btn-outline-danger,
+#section-nav .btn-outline-danger:hover,
+#section-nav .btn-outline-danger:focus,
+#section-nav .btn-outline-danger.active {
+  color: #fff !important;
+  background-color: #ec938c !important;
+  border-color: #ec938c !important;
+}
+#section-nav .btn-outline-danger {
+  color: #ec938c !important;
+  background: #fff !important;
+}
+
+    /* 手機時，左側隱藏，顯示下拉 */
+    @media (max-width: 767.98px) {
+      .desktop-nav { display: none !important; }
+      .mobile-nav { display: block !important; }
+
+    }
+    @media (min-width: 768px) {
+      .desktop-nav { display: block !important; }
+      .mobile-nav { display: none !important; }
+
+    }
