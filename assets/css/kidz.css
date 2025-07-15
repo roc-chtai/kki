@@ -752,17 +752,18 @@ progress {
 
 @media (min-width: 576px) {
   .container-sm, .container {
-    max-width: 550px;
+    /* max-width: 550px; */
   }
 }
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
-    max-width: 755px;
+    max-width: 90%;
   }
 }
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
-    max-width: 975px;
+    max-width: 1000px;
+    width: 90%;
   }
 }
 @media (min-width: 1200px) {
@@ -792,8 +793,8 @@ progress {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding-right: calc(var(--bs-gutter-x) * 0.8);
+  padding-left: calc(var(--bs-gutter-x) * 0.8);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -4738,7 +4739,7 @@ textarea.form-control-lg {
 }
 
 .card-body {
-  flex: 1 1 auto;
+  /* flex: 1 1 auto; */
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
 }
@@ -16033,7 +16034,7 @@ a {
 .card {
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
   position: relative;
-  margin-bottom: 1.56rem;
+  /* margin-bottom: 1.56rem; */
 }
 .card .card-header-lg h3, .card .card-header-lg .h3 {
   font-size: 2.15rem;
@@ -16352,16 +16353,29 @@ a {
 
 /* Section Top */
 .section-top {
-  margin-top: -60px;
+  margin-top: -20px;
+}
+.font-size-top{
+  font-size:1.2rem;
+}
+@media (min-width: 768px) {
+  .section-top {
+    margin-top: -30px;
+  }
+  .font-size-top{
+  font-size:1.6rem;
 }
 @media (min-width: 992px) {
   .section-top {
-    margin-top: -70px;
+    margin-top: -30px;
   }
+  .font-size-top{
+  font-size:2rem;
+}
 }
 @media (min-width: 1200px) {
   .section-top {
-    margin-top: -90px;
+    margin-top: -40px;
   }
 }
 
