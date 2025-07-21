@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>我的CodePen作品</title>
+  <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,600,700|Open+Sans:300,400,600,700" rel="stylesheet">
+<link rel="stylesheet" href="https://roc-chtai.github.io/kki/assets/plugins/fontawesome-5.15.2/css/all.min.css">
+<link rel="stylesheet" href="https://roc-chtai.github.io/kki/assets/plugins/animate/animate.css">
+<link rel="stylesheet" href="https://roc-chtai.github.io/kki/assets/plugins/fancybox/jquery.fancybox.min.css">
+<link rel="stylesheet" https://roc-chtai.github.io/kki/assets/plugins/isotope/isotope.min.css">
+<link rel="stylesheet"https://roc-chtai.github.io/kki/assets/plugins/owl-carousel/owl.carousel.min.css">
+<link rel="stylesheet"https://roc-chtai.github.io/kki/assets/plugins/owl-carousel/owl.theme.default.min.css">
+<link rel="stylesheet"https://roc-chtai.github.io/kki/assets/css/kidz.css">
+<link rel="stylesheet"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <style>
+
+.swiper-fullscreen-box {
+  position: relative;
+  width: 100w;
+  max-width: 1280px;
+  margin: auto;
+  background: #eee;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+body {
+  overflow-x: hidden;
+}
+
+.rev_slider_wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.section-top {
+  position: relative;
+  z-index: 2; /* 比輪播大就好 */
+}
+
+.section-top .card {
+  height: auto;   
+  display: flex;
+  align-items: center;
+  outline: 4px solid rgba(255, 255, 255, 0.8);
+
+}
+
+
+
+
+
+
+
+
+
+/* 立體+圖文宣傳 */
+    :root {
+  --prism-width: clamp(100px, 17vw, 180px);
+  --prism-depth: calc(var(--prism-width) * 0.875);
+}
+
+.custom-section {
+  width: 100%;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.row-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.left-side, .right-side {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.right-side {
+  flex: 0 0 40%;
+  max-width: 50%;
+}
+.left-side {
+  flex: 0 0 60%;
+  max-width: 60%;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+.text-block {
+    margin-left: 15%;
+    max-width: 460px;
+    width: 130%;
+    margin-bottom: -34px;
+}
+.subtitle {
+  font-size: clamp(14px, 3vw, 20px);
+  color: #5e5e5e;
+  font-weight: 500;
+  margin-bottom: -2px;
+}
+.main-title {
+  font-size: clamp(20px, 5vw, 32px);
+  font-weight: bold;
+  margin-bottom: 10px; 
+}
+.text-danger {
+  color: #F46927;
+}
+.desc {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+.highlight {
+margin-left:-15px;
+  display: inline;
+  background: linear-gradient(120deg, #ffe083 60%, transparent 100%);
+  /* 120deg可調，#ffe083為黃色螢光筆色，可改成你主題色 */
+  box-decoration-break: clone;
+  padding: 0 4px;
+  border-radius: 0.3em;
+  /* 若想只標重點，可用span包重點字 */
+}
+
+/* 立體圖區塊上下左右置中、寬度100%自適應 */
+.cube-block {
+    flex: 1 1 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 8%;
+    padding-right: 10%;
+}
+
+.hex-prism-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 500px;
+  overflow: visible;
+  /* 讓六角柱不要爆版，可自由微調最大寬度 */
+  max-width: 220px;
+  margin: 0 auto;
+}
+.hex-prism {
+  width: var(--prism-width);
+  aspect-ratio: 2 / 1;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.08s linear;
+}
+.hex-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 16px #0003;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 16px;
+  user-select: none;
+  background: #d44e4e;
+  transition: box-shadow 0.18s, filter 0.18s;
+}
+.hex-face h3 {
+  font-size: clamp(20px, 4vw, 40px);
+  margin: 0;
+  font-weight: 700;
+}
+.hex-face:nth-child(1) { transform: rotateY(0deg)   translateZ(var(--prism-depth));}
+.hex-face:nth-child(2) { transform: rotateY(60deg)  translateZ(var(--prism-depth));}
+.hex-face:nth-child(3) { transform: rotateY(120deg) translateZ(var(--prism-depth));}
+.hex-face:nth-child(4) { transform: rotateY(180deg) translateZ(var(--prism-depth));}
+.hex-face:nth-child(5) { transform: rotateY(240deg) translateZ(var(--prism-depth));}
+.hex-face:nth-child(6) { transform: rotateY(300deg) translateZ(var(--prism-depth));}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.full-image {
+  width: 120%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .row-section {
+    display: block;
+    min-height: auto;
+  }
+  .left-side {
+    display: contents;
+    padding: 0;
+  }
+    .text-block {
+        margin: 0 0 25px 18px;
+        width: 100%;
+        max-width: 100%;
+    }
+  .cube-block,
+  .right-side {
+    display: inline-block;
+    vertical-align: top;
+  }
+    .cube-block {
+        width: 67%;
+        padding-right: 8%;
+        padding-top: 2%;
+    }
+    .right-side {
+        width: 32%;
+        margin-top: -10%;
+        margin-left: 0;
+        display: inline-block;
+    }
+    .full-image {
+        width: 100%;
+        margin-left: -15%;
+        margin-top: -14%;
+    }
+}
+
+@media (max-width: 576px) {
+      :root {
+  --prism-width: clamp(80px, 17vw, 180px);
+}
+
+  .right-side {
+        width: 29%;
+    
+    }
+  .cube-block {
+        width: 69%;
+        padding-right: 0%;
+        padding-top: 0%;
+    }
+  .hex-face h3{
+    font-size:16px;
+  }
+}
+
+.desc-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.view-subject {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+  color: #F46927; /* 主題色 */
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.view-subject i {
+  font-size: 30px;
+  margin-top: 4px;
+  animation: bounce 1.5s infinite;
+}
+
+/* 箭頭跳動動畫 */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+
+@media (max-width: 1080px) {
+  .desc-group {
+    flex-direction: column;
+    align-items: flex-start; /* <-- 改這裡！靠左 */
+    gap: 4px;
+    text-align: left; /* <-- 改這裡！不要置中 */
+    padding-botton:5px;
+  }
+
+  .view-subject {
+    flex-direction: row; /* 小螢幕變橫排也可以 */
+    align-items: center;
+    gap: 6px;
+  }
+
+  .view-subject i {
+    font-size: 18px;
+    animation: bounce 1.2s infinite;
+  }
+}
+
+/* 立體+圖文宣傳 */
+.badge-rounded {
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 6px 6px;
+  line-height: 1.3;
+  font-weight: 500;
+  white-space: nowrap;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+
+}
+.badge-rounded strong {
+  font-size: 28px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ✅ 外框控制整體高度 */
+.wrapper {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+/* ✅ 主要容器 */
+.containerC {
+  display: flex;
+  width: 90%;
+  height: 100%;
+}
+
+/* ✅ A 區塊（左邊） */
+.blockA {
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ B 區塊（右邊） */
+.blockB {
+  flex: 0 0 65%;
+  position: relative;
+}
+
+/* ✅ a / b 區域 */
+.a,
+.b {
+  flex: 1;
+  position: relative; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ dropdown 樣式 */
+.dropdownA {
+    width: 80%;
+    height: 75%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    appearance: none;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+/* ✅ 資訊區塊 */
+.info-box {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background: #fff;
+    padding: 15px 15px 10px 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    font-size: 1rem;
+}
+
+.info-box p {
+  margin-bottom:0.5rem;
+
+}
+
+
+
+
+/* ✅ 按鈕 */
+.contact-button {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba
+(0, 0, 0, 0.2);
+    line-height: 1.4;
+    text-align: center;
+    width: 100%;
+}
+
+/* ✅ 手機版調整 */
+@media (max-width: 768px) {
+  .wrapper {
+    height: auto;
+  }
+
+  .containerC {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .blockA {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .a, .b {
+    width: 50%;
+    height: auto;
+  }
+
+  .a .dropdownA,
+  .b .dropdownA {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    height: auto;
+  }
+
+  .blockB {
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .info-box {
+    width: 90%;
+    position: static;
+    transform: none;
+    margin: 0 auto 20px;
+  }
+
+  .contact-button {
+    position: static;
+    transform: none;
+    display: block;
+    margin: 0 auto 20px;
+  }
+}
+
+
+.card-transparent .card-body a {
+    color: #d76d6d !important;
+}
+
+
+  </style>
+</head>
+<body>
+
+<!--====================================
+——— 倫波圖-自適應高度-
+===================================== -->
+<div class="swiper-fullscreen-box">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      
+      
+      <div class="swiper-slide">
+        <a href="https://donhi.com.tw/1" target="_blank"><img src="https://www.dadonhi.com/uploads/tVwG6cXDiZVhqZHBDtCi9Z8UbHcsYJ4Z.jpg" alt=""></a>
+      </div>
+      
+      
+      <div class="swiper-slide">
+        <a href="https://donhi.com.tw/2" target="_blank"><img src="https://donhi.com.tw/uploads/tad_themes/donhi2025/slide/slide_13_16_VMA.png" alt=""></a>
+      </div>
+      <div class="swiper-slide">
+        <a href="https://donhi.com.tw/3" target="_blank"><img src="https://donhi.com.tw/uploads/tad_themes/donhi2025/slide/slide_13_15_GT8.png" alt=""></a>
+      </div>
+      <div class="swiper-slide"><span class="badge badge-rounded bg-danger m-4 text-center small">…</span>
+        <a href="https://donhi.com.tw/4" target="_blank"><img src="https://donhi.com.tw/uploads/tad_themes/donhi2025/slide/slide_13_16_Wb0.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ====================================
+———	錨點
+===================================== -->
+<section class="d-none d-sm-block section-top">
+  <div class="container">
+    <div class="row wow fadeInUp">
+      <div class="col-sm-3">
+        <div class="card bg-primary card-hover">
+          <div class="card-body p-0">
+            <a href="#courses" class="d-flex align-items-center justify-content-center gap-2 w-100 h-100 py-3 text-decoration-none">
+              <h2 class="text-white font-size-top font-dosis mb-0">最新考情</h2>
+              <i class="fas fa-chevron-down text-white"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card bg-success card-hover">
+          <div class="card-body p-0">
+            <a href="#teachers" class="d-flex align-items-center justify-content-center gap-2 w-100 h-100 py-3 text-decoration-none">
+              <h2 class="text-white font-size-top font-dosis mb-0">全國連鎖</h2>
+              <i class="fas fa-chevron-down text-white"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card bg-danger card-hover">
+          <div class="card-body p-0">
+            <a href="#gallery_home" class="d-flex align-items-center justify-content-center gap-2 w-100 h-100 py-3 text-decoration-none">
+              <h2 class="text-white font-size-top font-dosis mb-0">專人諮詢</h2>
+              <i class="fas fa-chevron-down text-white"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card bg-info card-hover">
+          <div class="card-body p-0">
+            <a href="#blog" class="d-flex align-items-center justify-content-center gap-2 w-100 h-100 py-3 text-decoration-none">
+              <h2 class="text-white font-size-top font-dosis mb-0">成功之路</h2>
+              <i class="fas fa-chevron-down text-white"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ====================================
+———	選轉按鈕 圖文推廣
+===================================== -->
+    <section class="pt-5 pb-6 py-md-4 custom-section">
+  <div class="container">
+    <div class="row-section">
+      <!-- 左側 -->
+      <div class="left-side">
+        <!-- 文字區塊 -->
+        <div class="text-block">
+ <div class="subtitle highlight">
+     &nbsp;&nbsp;不只國考，也陪你走過教師與證照考試
+  </div>
+  <div class="main-title text-danger">隨時更新國考資訊，幫你準備每一步！</div>
+ 
+<div class="desc-group">
+  <div class="desc">
+    每個早起的清晨，每個夜深的堅持，<br>
+    都會成為成就理想的墊腳石。
+  </div>
+  <div class="view-subject">
+    <span>點擊查看考科</span>
+    <i class="fas fa-arrow-down" aria-hidden="true"></i>
+  </div>
+</div>
+</div>
+        <!-- 六角柱立體圖 -->
+        <div class="cube-block">
+          <div class="hex-prism-container">
+            <div class="hex-prism" id="hexPrism">
+              <div class="hex-face" data-href="#"><h3>公職考試</h3></div>
+              <div class="hex-face" data-href="#"><h3>國營事業</h3></div>
+              <div class="hex-face" data-href="#"><h3>AI規劃師</h3></div>
+              <div class="hex-face" data-href="#"><h3>證照考試</h3></div>
+              <div class="hex-face" data-href="#"><h3>教檢教甄</h3></div>
+              <div class="hex-face" data-href="#"><h3>銀行招考</h3></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 右側 -->
+      <div class="right-side">
+        <img src="https://roc-chtai.github.io/central/big-umi/img/readbook-Image.png" alt="閱讀圖片" class="full-image">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================
+———	最新考試情報 SECTION
+===================================== -->
+<section class="pt-6 pb-7" id="exam-news">
+  <div class="container">
+    <div class="section-title justify-content-center  mb-md-8 wow fadeInUp">
+      <span class="shape shape-left bg-info"></span>
+      <h2 class="text-danger">最新考試情報</h2>
+      <span class="shape shape-right bg-info"></span>
+    </div>
+
+    <div class="row wow fadeInUp">
+      <!-- 卡片 1 -->
+      <div class="col-md-4 pt-3 ">
+        <div class="card">
+          <div class="position-relative">
+            <a href="#">
+              <img class="card-img-top lazyestload" src="https://www.dadonhi.com/uploads/tVwG6cXDiZVhqZHBDtCi9Z8UbHcsYJ4Z.jpg" alt="考試圖片">
+            </a>
+            <div class="card-img-overlay p-0">
+              <span class="badge badge-rounded bg-primary m-4 text-center small">
+                報名期間<br><strong>7/10～7/25</strong>
+              </span>
+            </div>
+          </div>
+          <div class="card-body border-top-5 px-3 border-primary">
+            <h3 class="card-title">
+              <a class="text-primary text-capitalize d-block text-truncate" href="#">
+                113年高普考成績公告
+              </a>
+            </h3>
+            <ul class="list-unstyled d-flex flex-md-column flex-lg-row">
+              <li class="me-2">
+                <a class="text-muted" href="#"><i class="fa fa-user me-2"></i>前往考試簡章</a>
+              </li>
+              <li class="me-2">
+                <a class="text-muted" href="#"><i class="fas fa-comments me-2"></i>顯示徵才人數</a>
+              </li>
+            </ul>
+            <p class="mb-2">高普考已放榜，可至國考查詢平台輸入准考證查詢成績。</p>
+            <a class="btn btn-link text-hover-warning ps-0" href="#">
+              <i class="fas fa-angle-double-right me-1"></i> 查看公告
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 卡片 2 -->
+      <div class="col-md-4 pt-6">
+        <div class="card">
+          <div class="position-relative">
+            <a href="#">
+              <img class="card-img-top lazyestload" src="https://www.dadonhi.com/uploads/tVwG6cXDiZVhqZHBDtCi9Z8UbHcsYJ4Z.jpg" alt="考試圖片">
+            </a>
+            <div class="card-img-overlay p-0">
+              <span class="badge badge-rounded bg-success m-4 text-center small">
+                報名截止<br><strong>8/05</strong>
+              </span>
+            </div>
+          </div>
+          <div class="card-body border-top-5 px-3 border-success">
+            <h3 class="card-title">
+              <a class="text-success text-capitalize d-block text-truncate" href="#">
+                教師甄試筆試即將舉行
+              </a>
+            </h3>
+            <ul class="list-unstyled d-flex flex-md-column flex-lg-row">
+              <li class="me-2">
+                <a class="text-muted" href="#"><i class="fa fa-user me-2"></i>招考簡章</a>
+              </li>
+              <li class="me-2">
+                <a class="text-muted" href="#"><i class="fas fa-comments me-2"></i>報名人數</a>
+              </li>
+            </ul>
+            <p class="mb-2">112學年度教師甄試筆試將於 8/15 舉行，考生務必查詢考場。</p>
+            <a class="btn btn-link text-hover-success ps-0" href="#">
+              <i class="fas fa-angle-double-right me-1"></i> 查看詳情
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 卡片 3 -->
+      <div class="col-md-4 pt-6">
+        <div class="card">
+          <div class="position-relative">
+            <a href="#">
+              <img class="card-img-top lazyestload" src="https://www.dadonhi.com/uploads/tVwG6cXDiZVhqZHBDtCi9Z8UbHcsYJ4Z.jpg" alt="考試圖片">
+            </a>
+            <div class="card-img-overlay p-0">
+              <span class="badge badge-rounded bg-danger m-4 text-center small">
+                考試日期<br><strong>9/01</strong>
+              </span>
+            </div>
+          </div>
+          <div class="card-body border-top-5 px-3 border-danger">
+            <h3 class="card-title">
+              <a class="text-danger text-capitalize d-block text-truncate" href="#">
+                公股銀行招考開跑
+              </a>
+            </h3>
+            <ul class="list-unstyled d-flex flex-md-column flex-lg-row">
+              <li class="me-2">
+                <a class="text-muted" href="#"><i class="fa fa-user me-2"></i>報名簡章</a>
+              </li>
+              <li class="me-2">
+                <a class="text-muted" href="#"><i class="fas fa-comments me-2"></i>招考人數：</a>
+              </li>
+            </ul>
+            <p class="mb-2">第一銀行與合庫將於 9 月初聯合招考，考生請把握報名時程。</p>
+            <a class="btn btn-link text-hover-danger ps-0" href="#">
+              <i class="fas fa-angle-double-right me-1"></i> 立即報名
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 按鈕 -->
+    <div class="btn-aria text-center mt-4 wow fadeInUp">
+      <a href="exam-date-list.html" class="btn btn-danger text-uppercase" style="width:60%; color:#FFF;">
+        最新考試日期一覽表
+      </a>
+    </div>
+  </div>
+</section>
+    
+<!-- ====================================
+———	全國連鎖
+===================================== -->
+<section class="bg-light py-6 py-md-10 mb-3 mb-md-4">
+	<div class="container">
+    <div class="section-title justify-content-center mb-1 mb-md-3 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+      <span class="shape shape-left bg-info"></span>
+      <h2 class="text-danger">全國連鎖</h2>
+      <span class="shape shape-right bg-info"></span>
+    </div>
+    <div class="wow fadeInUp mb-3" style="visibility: visible; animation-name: fadeInUp;">
+        <div class="section-title justify-content-center">
+        <p class="text-muted font-size-18 mb-0">您可參考各分班資訊，並利用電話、Line群組、FB粉絲團或親洽各分班！</p>
+        </div>
+    </div>
+    <div id="brands" class="owl-carousel owl-theme brand-slider wow fadeInUp owl-loaded owl-drag" dir="ltr" style="visibility: visible; animation-name: fadeInUp;">
+      
+
+			
+
+			
+
+			
+
+			
+
+      
+    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1775px, 0px, 0px); transition: 0.25s; width: 3045px;"><div class="owl-item cloned" style="width: 223.667px; margin-right: 30px;"><div class="item shadow-sm rounded bg-info py-5 mb-5">
+        <a href="https://donhi.com.tw/modules/myclass/index.php?area_sn=3">
+          <h3 class="my text-center text-white">中彰投</h3>
+        </a>
+      </div></div><div class="owl-item cloned" style="width: 223.667px; margin-right: 30px;"><div class="item shadow-sm rounded bg-purple py-5 mb-5">
+        <a href="https://donhi.com.tw/modules/myclass/index.php?area_sn=4">
+          <h3 class="my text-center text-white">雲嘉南</h3>
+        </a>
+      </div></div><div class="owl-item cloned" style="width: 223.667px; margin-right: 30px;"><div class="item shadow-sm rounded bg-pink py-5 mb-5">
+        <a href="https://donhi.com.tw/modules/myclass/index.php?area_sn=8">
+          <h3 class="my text-center text-white">高屏區</h3>
+        </a>
+      </div></div><div class="owl-item" style="width: 223.667px; margin-right: 30px;"><div class="item shadow-sm rounded bg-primary py-5 mb-5">
+        <a href="https://donhi.com.tw/modules/myclass/index.php?area_sn=2">
+          <h3 class="my text-center text-white">大台北</h3>
+        </a>
+      </div></div><div class="owl-item" style="width: 223.667px; margin-right: 30px;"><div class="item shadow-sm rounded bg-danger py-5 mb-5">
+        <a href="https://donhi.com.tw/modules/myclass/index.php?area_sn=5">
+          <h3 class="my text-center text-white">基宜花</h3>
+        </a>
+      </div></div><div class="owl-item" style="width: 223.667px; margin-right: 30px;"><div class="item shadow-sm rounded bg-success py-5 mb-5">
+        <a href="https://donhi.com.tw/modules/myclass/index.php?area_sn=7">
+          <h3 class="my text-center text-white">桃竹苗</h3>
+        </a>
+      </div></div><div class="owl-item" style="width: 223.667px; margin-right: 30px;"><div class="item shadow-sm rounded bg-info py-5 mb-5">
+        <a href="https://donhi.com.tw/modules/myclass/index.php?area_sn=3">
+          <h3 class="my text-center text-white">中彰投</h3>
+        </a>
+      </div></div><div class="owl-item active" style="width: 223.667px; margin-right: 30px;"><div class="item shadow-sm rounded bg-purple py-5 mb-5">
+        <a href="https://donhi.com.tw/modules/myclass/index.php?area_sn=4">
+          <h3 class="my text-center text-white">雲嘉南</h3>
+        </a>
+      </div></div><div class="owl-item active" style="width: 223.667px; margin-right: 30px;"><div class="item shadow-sm rounded bg-pink py-5 mb-5">
+        <a href="https://donhi.com.tw/modules/myclass/index.php?area_sn=8">
+          <h3 class="my text-center text-white">高屏區</h3>
+        </a>
+      </div></div><div class="owl-item cloned active" style="width: 223.667px; margin-right: 30px;"><div class="item shadow-sm rounded bg-primary py-5 mb-5">
+        <a href="https://donhi.com.tw/modules/myclass/index.php?area_sn=2">
+          <h3 class="my text-center text-white">大台北</h3>
+        </a>
+      </div></div><div class="owl-item cloned" style="width: 223.667px; margin-right: 30px;"><div class="item shadow-sm rounded bg-danger py-5 mb-5">
+        <a href="https://donhi.com.tw/modules/myclass/index.php?area_sn=5">
+          <h3 class="my text-center text-white">基宜花</h3>
+        </a>
+      </div></div><div class="owl-item cloned" style="width: 223.667px; margin-right: 30px;"><div class="item shadow-sm rounded bg-success py-5 mb-5">
+        <a href="https://donhi.com.tw/modules/myclass/index.php?area_sn=7">
+          <h3 class="my text-center text-white">桃竹苗</h3>
+        </a>
+      </div></div></div></div><div class="owl-nav disabled"><div class="owl-prev">prev</div><div class="owl-next">next</div></div><div class="owl-dots disabled"></div></div>
+
+    <div class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+      <div class="text-center">
+      <a href="https://donhi.com.tw/modules/myclass/" target="_self" class="btn btn-danger shadow-sm text-uppercase">
+          <i class="fas fa-phone-alt me-2" aria-hidden="true"></i>更多分班資訊
+      </a>
+      </div>
+    </div>
+	</div>
+</section>
+<!-- ====================================
+———專人諮詢
+===================================== -->
+<section class="consult-section pt-6">
+  <div class="section-title justify-content-center mb-1 mb-md-3 wow fadeInUp"
+       style="visibility: visible; animation-name: fadeInUp;">
+    <span class="shape shape-left bg-info"></span>
+    <h2 class="text-danger">專人諮詢</h2>
+    <span class="shape shape-right bg-info"></span>
+  </div>
+
+<div class="wrapper">
+  <div class="containerC">
+    <div class="blockA">
+      <div class="a">
+        <select class="dropdownA location-select">
+          <option disabled selected>請選擇地區</option>
+          <option>台北</option>
+          <option>台中</option>
+          <option>台南</option>
+        </select>
+      </div>
+      <div class="b">
+        <select class="dropdownA class-select ">
+          <option disabled selected>請選擇分班</option>
+          <option>信義班</option>
+          <option>龍井班</option>
+          <option>糖廠班</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="blockB">
+      <div class="info-box">
+        <p><strong>地址：</strong>台北市信義區市府路45號</p>
+        <p><strong>電話：</strong>02-1234-5678</p>
+        <p><strong>營業時間：</strong>週一至週五 09:00 - 18:00</p>
+      </div>
+      <button class="contact-button bg-danger">填寫諮詢表單<br>專人免費諮詢</button>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+<!-- ====================================
+———	HOME FEATURE
+===================================== -->
+<section class="pt-9 pb-2 py-md-10 " id="success-road" style="background:#fff2f2;">
+  <div class="container">
+    <div class="section-title justify-content-center mb-2 mb-md-8 wow fadeInUp">
+      <span class="shape shape-left bg-danger"></span>
+      <h2 class="text-danger">成功之路</h2>
+      <span class="shape shape-right bg-danger"></span>
+    </div>
+
+    <div class="team-slider owl-carousel owl-theme wow fadeInUp" dir="ltr">
+
+      <!-- 卡片一 -->
+      <div class="card card-hover card-transparent shadow-none">
+        <div class="card-img-wrapper position-relative shadow-sm rounded-circle mx-auto">
+          <img class="bg-white card-img-top rounded-circle lazyestload" src="https://api.dicebear.com/7.x/adventurer/svg?seed=old1" alt="success-img1"/>
+        </div>
+        <div class="card-body text-center">
+          <a class="font-size-20 font-weight-medium d-block" href="#">陳同學</a>
+          <span class="">高普考／一般行政／高考上榜</span>
+        </div>
+      </div>
+
+      <!-- 卡片二 -->
+      <div class="card card-hover card-transparent shadow-none">
+        <div class="card-img-wrapper position-relative shadow-sm rounded-circle mx-auto">
+          <img class="bg-white card-img-top rounded-circle lazyestload" src="https://api.dicebear.com/7.x/adventurer/svg?seed=old2" alt="success-img2"/>
+        </div>
+        <div class="card-body text-center">
+          <a class="font-size-20 font-weight-medium d-block" href="#">林同學</a>
+          <span class="">地方特考／財稅行政／榜首錄取</span>
+        </div>
+      </div>
+
+      <!-- 卡片三 -->
+      <div class="card card-hover card-transparent shadow-none">
+        <div class="card-img-wrapper position-relative shadow-sm rounded-circle mx-auto">
+          <img class="bg-white card-img-top rounded-circle lazyestload" src="https://api.dicebear.com/7.x/adventurer/svg?seed=old3" alt="success-img3"/>
+        </div>
+        <div class="card-body text-center">
+          <a class="font-size-20 font-weight-medium d-block" href="#">張同學</a>
+          <span class="">初等考／社會行政／成功轉職</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="#" class="bg-white btn btn-outline-light font-weight-bold" style="color:#000000; box-shadow: 2px 2px 0 rgba(0,0,0,0.8);">更多學長姐的分享</a>
+    </div>
+  </div>
+</section>
+
+  
+<script src="https://roc-chtai.github.io/kki/assets/plugins/jquery/jquery.min.js"></script>
+<script src="https://roc-chtai.github.io/kki/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://roc-chtai.github.io/kki/assets/plugins/fancybox/jquery.fancybox.min.js"></script>
+<script src="https://roc-chtai.github.io/kki/assets/plugins/isotope/isotope.min.js"></script>
+<script src="https://roc-chtai.github.io/kki/assets/plugins/images-loaded/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://roc-chtai.github.io/kki/assets/plugins/lazyestload/lazyestload.js"></script>
+<script src="https://roc-chtai.github.io/kki/assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+<script src="https://roc-chtai.github.io/kki/assets/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="https://roc-chtai.github.io/kki/assets/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="https://roc-chtai.github.io/kki/assets/plugins/wow/wow.min.js"></script>
+<script src="https://roc-chtai.github.io/kki/assets/js/kidzhttps://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js.js"></script>
+
+
+  <!-- 倫波新增-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://uat.donhi.com.tw/themes/donhi2025/assets/js/kidz.js"></script>
+
+  <script>
+document.querySelectorAll('.swiper-slide a').forEach(function(a) {
+  let down = false, moved = false;
+  a.addEventListener('mousedown', ()=>{down=true; moved=false;});
+  a.addEventListener('mousemove', ()=>{if(down)moved=true;});
+  a.addEventListener('mouseup', e=>{
+    if(moved) e.preventDefault();
+    down = false; moved = false;
+  });
+  // 手機觸控
+  a.addEventListener('touchstart', ()=>{down=true; moved=false;});
+  a.addEventListener('touchmove', ()=>{if(down)moved=true;});
+  a.addEventListener('touchend', e=>{
+    if(moved) e.preventDefault();
+    down = false; moved = false;
+  });
+});
+
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  loop: true,
+  allowTouchMove: true,
+  simulateTouch: true,
+  navigation: false,
+  pagination: false,
+autoHeight: true,
+});
+
+
+
+// 立體旋轉
+  // Prism 旋轉
+    function setupPrism(id) {
+      const prism = document.getElementById(id);
+      if (!prism) return;
+      let angle = 0;
+      let autoSpeed = 0.2;
+      let speed = autoSpeed;
+      let dragging = false;
+      let lastX = 0, lastY = 0;
+      let lastTime = 0;
+      let inertia = 0;
+
+      function animate() {
+        if (!dragging) {
+          angle += speed;
+          if (Math.abs(speed - autoSpeed) > 0.001) {
+            speed *= 0.97;
+            if (Math.abs(speed) < autoSpeed) speed = autoSpeed * (speed > 0 ? 1 : -1);
+          } else {
+            speed = autoSpeed;
+          }
+        }
+        prism.style.transform = `rotateY(${angle}deg)`;
+        requestAnimationFrame(animate);
+      }
+      animate();
+
+      prism.addEventListener('mousedown', e => {
+        dragging = true;
+        lastX = e.clientX;
+        lastTime = Date.now();
+        inertia = 0;
+        prism.style.transition = 'none';
+        e.preventDefault();
+      });
+
+      window.addEventListener('mousemove', e => {
+        if (dragging) {
+          let dx = e.clientX - lastX;
+          angle += dx * 0.2;
+          let now = Date.now();
+          inertia = dx / (now - lastTime + 1);
+          lastX = e.clientX;
+          lastTime = now;
+          prism.style.transform = `rotateY(${angle}deg)`;
+        }
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (dragging) {
+          dragging = false;
+          speed = inertia * 2;
+          if (Math.abs(speed) < autoSpeed) speed = autoSpeed * (speed > 0 ? 1 : -1);
+          prism.style.transition = '';
+        }
+      });
+
+      // 手機
+      prism.addEventListener('touchstart', e => {
+        if (e.touches.length === 1) {
+          dragging = true;
+          lastX = e.touches[0].clientX;
+          lastY = e.touches[0].clientY; 
+          lastTime = Date.now();
+          inertia = 0;
+          prism.style.transition = 'none';
+          e.preventDefault();
+        }
+      });
+
+      window.addEventListener('touchmove', e => {
+        if (dragging && e.touches.length === 1) {
+          let dx = e.touches[0].clientX - lastX;
+          angle += dx * 0.25;
+          let now = Date.now();
+          inertia = dx / (now - lastTime + 1);
+          lastX = e.touches[0].clientX;
+          lastTime = now;
+          prism.style.transform = `rotateY(${angle}deg)`;
+          e.preventDefault();
+        }
+      }, { passive: false });
+
+      window.addEventListener('touchend', () => {
+        if (dragging) {
+          dragging = false;
+          speed = inertia * 2;
+          if (Math.abs(speed) < autoSpeed) speed = autoSpeed * (speed > 0 ? 1 : -1);
+          prism.style.transition = '';
+        }
+      });
+    }
+
+    setupPrism('hexPrismDesktop');
+    setupPrism('hexPrism');
+
+    // 點擊六角面
+    document.querySelectorAll('.hex-face').forEach(function(face) {
+      let startX = 0, startY = 0, moved = false;
+      // 桌機
+      face.addEventListener('mousedown', function(e) {
+        moved = false;
+        startX = e.clientX;
+        startY = e.clientY;
+      });
+      face.addEventListener('mousemove', function(e) {
+        if (Math.abs(e.clientX - startX) > 8 || Math.abs(e.clientY - startY) > 8) {
+          moved = true;
+        }
+      });
+      face.addEventListener('mouseup', function(e) {
+        if (!moved && face.dataset.href && face.dataset.href !== '#') {
+          window.open(face.dataset.href, "_self");
+        }
+      });
+      // 手機
+      face.addEventListener('touchstart', function(e) {
+        moved = false;
+        if (e.touches.length === 1) {
+          startX = e.touches[0].clientX;
+          startY = e.touches[0].clientY;
+        }
+      });
+      face.addEventListener('touchmove', function(e) {
+        if (e.touches.length === 1) {
+          let dx = Math.abs(e.touches[0].clientX - startX);
+          let dy = Math.abs(e.touches[0].clientY - startY);
+          if (dx > 8 || dy > 8) moved = true;
+        }
+      });
+      face.addEventListener('touchend', function(e) {
+        if (!moved && face.dataset.href && face.dataset.href !== '#') {
+          window.open(face.dataset.href, "_self");
+        }
+      });
+    });
+
+
+  </script>
+</body>
+</html>
