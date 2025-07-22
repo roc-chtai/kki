@@ -63,13 +63,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
 /* 立體+圖文宣傳 */
     :root {
   --prism-width: clamp(100px, 17vw, 180px);
@@ -309,14 +302,14 @@ margin-left:-15px;
 @media (max-width: 1080px) {
   .desc-group {
     flex-direction: column;
-    align-items: flex-start; /* <-- 改這裡！靠左 */
+    align-items: flex-start;
     gap: 4px;
-    text-align: left; /* <-- 改這裡！不要置中 */
+    text-align: left;
     padding-botton:5px;
   }
 
   .view-subject {
-    flex-direction: row; /* 小螢幕變橫排也可以 */
+    flex-direction: row;
     align-items: center;
     gap: 6px;
   }
@@ -351,7 +344,7 @@ margin-left:-15px;
   font-family: Arial, sans-serif;
 }
 
-/* ✅ 外框控制整體高度 */
+/* 外框控制整體高度 */
 .wrapper {
   height: 200px;
   display: flex;
@@ -360,27 +353,27 @@ margin-left:-15px;
   background: #fff;
 }
 
-/* ✅ 主要容器 */
+/*  主要容器 */
 .containerC {
   display: flex;
   width: 90%;
   height: 100%;
 }
 
-/* ✅ A 區塊（左邊） */
+/*  A 區塊（左邊） */
 .blockA {
   flex: 0 0 35%;
   display: flex;
   flex-direction: column;
 }
 
-/* ✅ B 區塊（右邊） */
+/*  B 區塊（右邊） */
 .blockB {
   flex: 0 0 65%;
   position: relative;
 }
 
-/* ✅ a / b 區域 */
+/*  a / b 區域 */
 .a,
 .b {
   flex: 1;
@@ -390,7 +383,7 @@ margin-left:-15px;
   justify-content: center;
 }
 
-/* ✅ dropdown 樣式 */
+/* dropdown 樣式 */
 .dropdownA {
     width: 80%;
     height: 75%;
@@ -409,7 +402,7 @@ margin-left:-15px;
 
 
 
-/* ✅ 資訊區塊 */
+/*  資訊區塊 */
 .info-box {
     position: absolute;
     top: 3%;
@@ -431,7 +424,7 @@ margin-left:-15px;
 
 
 
-/* ✅ 按鈕 */
+/*  按鈕 */
 .contact-button {
     position: absolute;
     bottom: 5%;
@@ -450,7 +443,7 @@ margin-left:-15px;
     width: 100%;
 }
 
-/* ✅ 手機版調整 */
+/*  手機版調整 */
 @media (max-width: 768px) {
   .wrapper {
     height: auto;
@@ -516,7 +509,7 @@ margin-left:-15px;
 <body>
 
 <!--====================================
-——— 倫波圖-自適應高度-
+——— 倫波圖-自適應高度-swiper
 ===================================== -->
 <div class="swiper-fullscreen-box">
   <div class="swiper mySwiper">
@@ -893,7 +886,7 @@ margin-left:-15px;
 
 
 <!-- ====================================
-———	HOME FEATURE
+———	成功之路
 ===================================== -->
 <section class="pt-9 pb-2 py-md-10 " id="success-road" style="background:#fff2f2;">
   <div class="container">
